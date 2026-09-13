@@ -2,6 +2,16 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 10: Logo Google + riset kompetitor + referensi scale
+**Dikerjakan:**
+- [x] Logo Google: huruf "G" → SVG resmi 4-warna di tombol login.
+- [x] Riset 5 tools PRD (ChatPRD, UX Pilot, River, WriteMyPRD, RapidNative) → docs/05-REFERENSI-TOOLS-PRD.md (peta + bedah + tabel adopsi 10 pola + diferensiasi + larangan).
+- [x] Referensi arsitektur 1M users dari user → docs/06-REFERENSI-ARSITEKTUR-SCALE.md (verbatim + header adaptasi SvelteKit bertahap).
+- [x] Insiden BESAR: sandbox restore → .git reset ke 57d8e33 (single-branch main!), .env* HILANG, node_modules/venv/pgdata/proses HILANG. Recovery: set-branches+fetch+reset-mixed (5 file Sesi 10 utuh) → npm ci → venv+PG16+initdb+13/13 tabel → .env baru (BETTER_AUTH_SECRET regenerate).
+- [x] Verifikasi: 7/7 route 200, logo SVG tampil di /login, get-session null ✅. OAuth Google MATI SEMENTARA (client ID/secret ikut hilang — minta user kirim ulang).
+**Status:** ⏳ Tunggu user: (1) kirim ulang Google Client ID + Secret, (2) review tampilan.
+**Next:** Kredensial masuk → login hijau → Fase 1 grill AI asli (OpenRouter key).
+
 ## 2026-09-13 — Sesi 09: Form quiz + Svelte Flow canvas + redesign anti-slop + 11 skill
 **Dikerjakan:**
 - [x] ABCD → **Form**: route `/form`, 13 soal kuesioner a/b/c + d tulis-sendiri, tiap soal 1 ide + "Kenapa ditanya", prefill grill (cocok→pilih, tak cocok→d), progress bar, kunci v1 + ringkasan. Konsep ABCD tetap (struktur A/B/C/D), label UI = Form.
