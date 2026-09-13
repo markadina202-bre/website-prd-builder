@@ -26,6 +26,15 @@ jobs:
           cache: npm
           cache-dependency-path: app/package-lock.json
       - run: npm ci || npm install
+      - name: Check DATABASE_URL secret
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::Repo secret DATABASE_URL kosong/belum diisi. Isi di: Settings → Secrets and variables → Actions → New repository secret (name: DATABASE_URL, value: connection string Neon). Lalu Re-run job ini."
+            exit 1
+          fi
+          echo "Secret DATABASE_URL terdeteksi (panjang ${#DATABASE_URL} karakter)."
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - name: Apply migrations
         run: npx drizzle-kit migrate
         env:
