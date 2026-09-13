@@ -20,9 +20,12 @@
 - [x] Kode: `auth.ts` (Google provider), `db/` (auth-schema 4 tabel + app-schema 9 tabel), `drizzle.config.ts`, `hooks.server.ts`, `/api/auth/[...all]`, `auth-client.ts`, login real + fallback mock, `.env.example`.
 - [x] Migrasi `drizzle/0000_init.sql` ter-generate (13 CREATE TABLE). Pelajaran: `useSession()` Svelte = store `{data,error,isPending}` → baca `$s.data.user`.
 - [x] Verifikasi: svelte-check 0 error, build OK, `/api/auth/get-session` 200.
-- [ ] User sudah sambung Neon↔GitHub, tapi connection string belum sampai ke sandbox (secrets tak terbaca via API).
-**Status:** ⏳ Kode 100% siap. Tunggu user paste DATABASE_URL (+ Google OAuth) untuk push schema & login real.
-**Next:** Terima DATABASE_URL → `drizzle-kit push` → test login Google end-to-end.
+- [x] User paste DATABASE_URL + Google Client ID → tersimpan di app/.env (gitignored, chmod 600). Pelajaran: quote nilai .env (karakter `&` merusak `source`).
+- [x] TEMUAN: sandbox = egress allowlist (bukti: example.com & api.neon:443 RST, github OK). neon-http MUSTAHIL dari sini → pindah ke postgres-js TCP (`prepare:false`, `ssl:require`).
+- [x] Strategi migrasi: `.github/workflows/migrate.yml` (dispatch manual + auto saat app/drizzle/** berubah; butuh repo secret DATABASE_URL). `gh secret set` DITOLAK 403 → user harus isi secret via GitHub UI.
+- [ ] Tunggu: (1) user tambah secret DATABASE_URL di GitHub (atau migrate dari laptop), (2) GOOGLE_CLIENT_SECRET.
+**Status:** ⏳ Kode + CI siap. Tunggu user isi secret → saya trigger migrasi & verifikasi 13 tabel.
+**Next:** Secret terisi → trigger migrate.yml → test login Google end-to-end (butuh CLIENT_SECRET).
 
 ## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
 **Fase:** Pra-Fase 0 (keputusan stack)

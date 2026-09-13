@@ -1,0 +1,36 @@
+# Terapkan migrasi Drizzle ke Neon dari CI (runner GitHub punya internet penuh).
+# Syarat: repo secret DATABASE_URL (Settings → Secrets → Actions).
+# Trigger: manual (Run workflow) atau otomatis saat app/drizzle/** berubah.
+name: DB Migrate (Neon)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - arena/01a09aee-website-prd-builder
+      - main
+    paths:
+      - 'app/drizzle/**'
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci || npm install
+      - name: Apply migrations
+        run: npx drizzle-kit migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: Verify tables
+        run: node -e "const postgres=require('postgres');const sql=postgres(process.env.DATABASE_URL,{prepare:false,ssl:'require'});sql`SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY tablename`.then(r=>{console.log('TABLES ('+r.length+'):',r.map(x=>x.tablename).join(', '));process.exit(0);}).catch(e=>{console.error('VERIFY-FAIL:',e.message);process.exit(1);});"
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

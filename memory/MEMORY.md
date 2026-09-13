@@ -17,6 +17,8 @@
 - M-013: Single source of truth langganan = tabel `Subscription` (bukan cookie/session).
 - M-014: Webhook pembayaran wajib: verifikasi signature + idempotent (dedup gateway ref) + retry via Inngest.
 - M-015: Rust = sidecar opsional (`services/rust/`): search engine index, worker PDF, auto-layout WASM, verifier. App harus jalan tanpa Rust (fallback JS). Jangan bangun sebelum ada bottleneck nyata.
+- M-024: Neon project: ep-lingering-poetry-ayt5jp8v (pooler, us-east-2). Kredensial HANYA di app/.env (gitignored, chmod 600) — JANGAN tulis password ke repo/chat ulang.
+- M-025: Sandbox Arena = egress allowlist (github/npm OK; contoh, neon, dsb di-RST). DB driver = postgres-js TCP (`prepare:false`, `ssl:require`); neon-http TIDAK bisa dari sandbox. Migrasi produksi via CI (.github/workflows/migrate.yml + secret DATABASE_URL).
 
 ## Bisnis
 - M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat). [CONFIRMED user 2026-09-13]
