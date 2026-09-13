@@ -48,3 +48,23 @@ Konsekuensi: bisa diubah saat review user; yang baku adalah PRINSIP (4 blok, aut
 Konteks: user minta cache.kv + indexing seperti cursor.ai.
 Keputusan: registry KV di `skills/cache.kv`; index = chunking + hash konten + inverted index + BM25-lite (tanpa embedding eksternal agar offline & gratis).
 Konsekuensi: recall semantik murni (embedding) jadi upgrade opsional nanti (text-embedding-3-small); retrieval leksikal cukup untuk 23 skill.
+
+## ADR-008 | 2026-09-13 | [CONFIRMED] Auth = Better Auth + Google OAuth
+Konteks: butuh login 1-klik Gmail untuk founder non-teknis; password ditolak (M-023).
+Keputusan: Better Auth (drizzle adapter, 4 tabel auth) + provider Google; email/password DISABLED; sesi server via hooks + useSession client; login demo mock hanya skeleton.
+Konsekuensi: butuh GOOGLE_CLIENT_ID/SECRET + redirect URI terdaftar di Console; login Google mustahil di iframe (wajib tab baru).
+
+## ADR-009 | 2026-09-13 | [CONFIRMED] DB ganda: Neon (prod/CI) + PG lokal (sandbox)
+Konteks: sandbox tak bisa menjangkau Neon (egress allowlist); dev butuh DB nyata.
+Keputusan: Neon = source of truth (migrasi via CI, repo secret); sandbox = PG 16 lokal TCP 127.0.0.1:5433 (pgserver, scripts/local-pg.py, .pgdata). `.env` lokal, `.env.neon` backup.
+Konsekuensi: migrasi ditulis sekali (drizzle/), diterapkan 2x (CI→Neon, lokal→PG); URL Neon tak pernah dipakai di sandbox.
+
+## ADR-010 | 2026-09-13 | [CONFIRMED] Preview user = production (adapter-node)
+Konteks: vite dev rapuh untuk user (ratusan modul, HMR, cache acak) → halaman putih/klik mati.
+Keputusan: user selalu dilayani `vite preview` (adapter-node, PORT 5173, env via source .env); dev hanya iterasi internal. Build wajib sebelum preview (build/ tak ikut snapshot).
+Konsekuensi: tiap ubah kode → check → build → restart preview → verifikasi curl semua route.
+
+## ADR-011 | 2026-09-13 | [SKELETON] Admin = gate email + tabel site_settings
+Konteks: butuh pantau (user/proyek) + ubah harga tanpa deploy.
+Keputusan skeleton: /admin + API summary/prices; gate requireAdmin (ADMIN_EMAILS; kosong = semua-login-boleh + banner); harga di site_settings key/value, landing SSR dari DB + fallback.
+Konsekuensi: production WAJIB isi ADMIN_EMAILS + pindah ke role admin di DB.

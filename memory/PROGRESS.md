@@ -2,6 +2,16 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 16: Paket pewarisan sesi baru
+**Dikerjakan:**
+- [x] Audit: skill 42/42 konsisten (index fresh, 254 chunk, retrieval teruji); prinsip 9; docs 00-06.
+- [x] DECISIONS: + ADR-008 (auth), ADR-009 (DB ganda), ADR-010 (preview production), ADR-011 (admin skeleton).
+- [x] AGENTS.md ditulis ulang v2 (7 pasal: baca urut, verifikasi, tulis, skill, kode, secret/git, komunikasi).
+- [x] Baru: memory/PANDUAN-SESI.md (checklist buka/tutup, perintah kunci, peta repo, recovery restore, proses hidup).
+- [x] Verifikasi: index rebuild 0-change + search OK; push terverifikasi.
+**Status:** ✅ Pewarisan lengkap. Tunggu Google client_secret + review + instruksi.
+**Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
+
 ## 2026-09-13 — Sesi 15: Halaman admin + harga dinamis
 **Dikerjakan:**
 - [x] Migrasi 0001: tabel site_settings + seed price_pro 49000 / price_team 199000 (lokal ✅; Neon ikut via CI migrate).
