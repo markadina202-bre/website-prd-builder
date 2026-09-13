@@ -31,6 +31,6 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - name: Verify tables
-        run: node -e "const postgres=require('postgres');const sql=postgres(process.env.DATABASE_URL,{prepare:false,ssl:'require'});sql`SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY tablename`.then(r=>{console.log('TABLES ('+r.length+'):',r.map(x=>x.tablename).join(', '));process.exit(0);}).catch(e=>{console.error('VERIFY-FAIL:',e.message);process.exit(1);});"
+        run: node scripts/verify-db.mjs
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
