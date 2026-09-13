@@ -21,7 +21,7 @@
 	<div class="rounded-2xl border border-stone-200 bg-white lg:col-span-2">
 		<div class="border-b border-stone-100 px-4 py-3">
 			<div class="flex items-center justify-between text-sm">
-				<p class="font-bold">🎤 Grill Session <span class="font-normal text-stone-400">(mock engine — 8 pertanyaan)</span></p>
+				<p class="font-bold">🎤 Sesi Tanya Jawab</p>
 				<p class="font-bold text-emerald-700">Ketajaman: {grill.sharpness}%</p>
 			</div>
 			<div class="mt-2 h-2 overflow-hidden rounded-full bg-stone-100">
@@ -82,6 +82,6 @@
 				{/each}
 			</ul>
 		{/if}
-		<p class="mt-4 text-[11px] text-stone-500">Skill: grill-me · grilling · grill-with-docs (mock)</p>
+		<p class="mt-4 text-[11px] text-stone-500">Konteks tersimpan otomatis setiap jawaban.</p>
 	</div>
 </div>

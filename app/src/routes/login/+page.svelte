@@ -33,7 +33,7 @@
 	</button>
 	{#if error}<p class="mt-3 text-xs text-red-600">{error}</p>{/if}
 	<button onclick={loginMock} class="mt-3 text-xs text-stone-400 underline hover:text-stone-600">
-		lanjut tanpa login (mode mock)
+		coba demo tanpa login
 	</button>
-	<p class="mt-4 text-[11px] text-stone-400">Better Auth + Neon Postgres — aktif setelah DATABASE_URL & kredensial Google terisi.</p>
+	<p class="mt-4 text-[11px] text-stone-400">Masuk aman dengan akun Google — tanpa password.</p>
 </div>

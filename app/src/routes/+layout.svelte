@@ -34,7 +34,7 @@
 <nav class="border-b border-stone-200 bg-white/80 backdrop-blur">
 	<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
 		<a href={email ? '/dashboard' : '/'} class="text-lg font-extrabold tracking-tight">
-			🧭 PRD Builder <span class="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-700">SKELETON</span>
+			🧭 PRD Builder <span class="ml-1 rounded bg-stone-200 px-1.5 py-0.5 text-[10px] font-bold text-stone-500">BETA</span>
 		</a>
 		<div class="flex items-center gap-3 text-sm">
 			{#if email}
@@ -52,5 +52,5 @@
 </main>
 
 <footer class="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center text-xs text-stone-400">
-	Skeleton Fase 0 — SvelteKit murni · Grill → ABCD → Wayfinder → Canvas → PRD
+	PRD Builder · Beta — Cerita → Tanya jawab → Struktur → Peta → Dokumen siap coding
 </footer>

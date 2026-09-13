@@ -21,7 +21,7 @@
 <p class="mt-1 text-sm text-stone-500">
 	🎯 <b>Destination:</b> {WAYFINDER_MOCK.destination}
 </p>
-<p class="mt-1 text-xs text-amber-700">⚠️ Mock statis — board hidup + tiket AFK di Fase 3.</p>
+<p class="mt-1 text-xs text-stone-400">Versi beta: contoh board — board hidup mengikuti proyekmu segera hadir.</p>
 
 <div class="mt-4 grid gap-3 md:grid-cols-4">
 	{#each COLS as [status, label]}

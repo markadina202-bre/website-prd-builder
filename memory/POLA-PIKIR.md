@@ -35,3 +35,8 @@ PROGRESS update, fakta baru → MEMORY, keputusan → DECISIONS, pola baru → s
 ## P-008: Indonesia-first dalam UX
 Bahasa sederhana, contoh lokal (toko kelontong, PPDB, absensi),
 harga rupiah, pembayaran yang orang kenal (QRIS/ShopeePay). Jangan asumsikan kartu kredit.
+
+## P-009: Skill = infrastruktur latar belakang, BUKAN pajangan
+Nama/mekanisme skill TIDAK BOLEH muncul di UI, copy produk, atau dokumen
+user-facing. User hanya merasakan perilaku cerdas. Skill dibahas hanya di
+repo internal (skills/, memory/, docs teknis) dan chat builder.

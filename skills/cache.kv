@@ -9,7 +9,7 @@
 
 cache.format = kv/1
 cache.indexed_at = 2026-09-13
-cache.count = 23
+cache.count = 31
 cache.index = skills/index/
 
 # --- 01. frontend-design (UI anti AI-slop) ---
@@ -213,3 +213,67 @@ skill.23.file = skills/codebasememory/SKILL.md
 skill.23.install = built-in (repo ini)
 skill.23.role = Memori persistent codebase: MEMORY.md file-based + SQLite/Chroma opsional + semantic recall + auto-inject konteks. Pola: supermemory (Memory API, knowledge graph), superlocalmemory (local-first, temporal), agent-memory (TerminalSkills).
 skill.23.use_in_project = TULANG PUNGGUNG PEWARISAN: memory/ + CONTEXT.md per proyek + index skills. Agen wajib baca sebelum kerja, tulis sesudah kerja.
+
+# --- 24. avoid-ai-design (audit & rewrite anti AI-slop) ---
+skill.24.id = avoid-ai-design
+skill.24.repo = funboy322/avoid-ai-design
+skill.24.url = https://github.com/funboy322/avoid-ai-design
+skill.24.install = npx skills add https://github.com/funboy322/avoid-ai-design
+skill.24.role = Audit frontend AI lalu rewrite agar tidak terlihat AI: katalog tells (tipografi, warna, layout, komponen, spacing, motion, ikon, copy, imagery) + severity P0/P1/P2 + mode detect-only atau rewrite.
+skill.24.use_in_project = Gate WAJIB tiap halaman: audit detect-only → perbaiki P0/P1 → rewrite searah. Dipakai bersama frontend-design (kreasi) + antislop (filter).
+
+# --- 25. antislop-suite (filter 38 aturan + Delivery Gate) ---
+skill.25.id = antislop-suite
+skill.25.repo = miqdadbadjuber/Anti-Slop
+skill.25.url = https://github.com/miqdadbadjuber/Anti-Slop
+skill.25.install = npx skills add https://github.com/miqdadbadjuber/Anti-Slop
+skill.25.role = Filter 6 skill (antislop core, ui, copywriting, human, layoutmobile, code): 38 aturan 3 tier (Hard/Purpose/Quality), Liveliness Toolkit (ENERGY/RHYTHM/MOTION), Delivery Gate PASS/FAIL. BUKAN style guide — arah desain dari DESIGN.md.
+skill.25.use_in_project = Mode During saat bangun UI + mode After untuk audit halaman lama. Copy Indonesia (headline, CTA, empty/error states) wajib lewat antislop-copywriting.
+
+# --- 26. web-design-guidelines (cek implementasi praktis) ---
+skill.26.id = web-design-guidelines
+skill.26.repo = vercel-labs/agent-skills
+skill.26.url = https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+skill.26.install = npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
+skill.26.role = Checklist implementasi: semantic HTML, focus states, dimensi gambar, kesalahan frontend yang wajib dihindari.
+skill.26.use_in_project = Standar markup semua halaman + canvas (aksesibilitas keyboard, focus ring, alt/size gambar). Pasangan: web-quality-skills.
+
+# --- 27. ux-ui-agent-skills (senior design architect + Svelte) ---
+skill.27.id = ux-ui-agent-skills
+skill.27.repo = plugin87/ux-ui-agent-skills
+skill.27.url = https://github.com/plugin87/ux-ui-agent-skills
+skill.27.stars = 1.2k+
+skill.27.role = 17 skill runnable: token DTCG 3-tier, komponen atomic + 8 states, adapter multi-framework (TERMASUK Svelte), audit WCAG 2.2, review 6 dimensi + Nielsen, motion tokenized, UX writing, 138 design systems, anti-slop doctrine.
+skill.27.use_in_project = Standar desain produk: token → komponen shadcn-svelte → halaman. Lihat juga: userinterface-wiki (raphaelsalaja), DESIGN.md standar Google (google-labs-code/design.md).
+
+# --- 28. tailwind-4-docs (Tailwind v4 — versi kita) ---
+skill.28.id = tailwind-4-docs
+skill.28.repo = Lombiq/Tailwind-Agent-Skills
+skill.28.url = https://github.com/Lombiq/Tailwind-Agent-Skills
+skill.28.install = npx skills add Lombiq/Tailwind-Agent-Skills
+skill.28.role = Dokumentasi Tailwind v4 yang dioptimasi agen: gotchas, playbook implementasi/refactor/review, snapshot docs lokal + index (cara mirip index skills repo ini).
+skill.28.use_in_project = Rujukan WAJIB styling (app memakai Tailwind v4 + @theme). Cek gotchas dulu sebelumutility eksotis.
+
+# --- 29. make-interfaces-feel-better (craft & feel) ---
+skill.29.id = make-interfaces-feel-better
+skill.29.repo = jakubkrehel/make-interfaces-feel-better
+skill.29.url = https://github.com/jakubkrehel/make-interfaces-feel-better
+skill.29.install = npx skills add https://github.com/jakubkrehel/make-interfaces-feel-better
+skill.29.role = Detail craft: optical alignment, word wrapping, button tactility, motion feel — yang membedakan "rapi" vs "premium".
+skill.29.use_in_project = Polish pass terakhir tiap halaman + micro-interaction canvas/kanban (drag feel, hover states, transisi).
+
+# --- 30. impeccable (taste + DESIGN.md + commands) ---
+skill.30.id = impeccable
+skill.30.repo = pbakaus/impeccable
+skill.30.url = https://github.com/pbakaus/impeccable
+skill.30.install = npx skills add https://github.com/pbakaus/impeccable
+skill.30.role = Selera + konteks produk + 12 command eksplisit (teach, document, shape, craft, critique, audit, polish, adapt, optimize, typeset, layout...). craft mewajibkan brief bentuk + arah visual + inspeksi browser + loop kritik-perbaiki.
+skill.30.use_in_project = Alur desain resmi: shape (brief) → craft (bangun) → critique (nilai) → polish (rapikan) untuk tiap halaman besar.
+
+# --- 31. web-quality-skills (a11y + perf + SEO) ---
+skill.31.id = web-quality-skills
+skill.31.repo = addyosmani/web-quality-skills
+skill.31.url = https://github.com/addyosmani/web-quality-skills/tree/main/skills
+skill.31.install = npx skills add https://github.com/addyosmani/web-quality-skills
+skill.31.role = Koleksi: accessibility (WCAG), best-practices, core-web-vitals (LCP/INP/CLS), performance, seo.
+skill.31.use_in_project = Quality gate pra-rilis tiap halaman: skor a11y + vitals + SEO dasar (meta, semantic, sitemap saat landing publik).

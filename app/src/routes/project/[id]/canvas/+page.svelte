@@ -3,8 +3,8 @@
 	$: id = $page.params.id;
 </script>
 
-<h1 class="text-xl font-black">🕸️ Canvas <span class="text-sm font-normal text-stone-400">(pratinjau statis — Svelte Flow di Fase 4)</span></h1>
-<p class="mt-1 text-sm text-stone-500">Nanti: drag-drop node, hubungkan edge, klik node untuk grill. Sekarang: mock SVG.</p>
+<h1 class="text-xl font-black">🕸️ Canvas</h1>
+<p class="mt-1 text-sm text-stone-500">Pratinjau arsitektur — editor visual drag-and-drop segera hadir.</p>
 
 <div class="mt-4 overflow-x-auto rounded-2xl border border-stone-200 bg-white p-4">
 	<svg viewBox="0 0 720 300" class="mx-auto w-full max-w-3xl">

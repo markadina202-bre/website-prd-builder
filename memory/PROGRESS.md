@@ -2,6 +2,16 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 06: Login error + de-brand + 8 skill desain + konsep v2
+**Dikerjakan:**
+- [x] Login error: log server BERSIH pasca-fix (tak ada error baru) → error user hampir pasti di sisi Google (redirect_uri_mismatch / consent). Menunggu info persis error dari user.
+- [x] De-brand: label skill dihapus dari UI (badge SKELETON→BETA, footer, grill, login, wayfinder, canvas) + prinsip P-009 (skill = latar belakang).
+- [x] Riset + install 8 skill desain/anti-slop (24-31): avoid-ai-design, antislop-suite, web-design-guidelines, ux-ui-agent-skills, tailwind-4-docs, make-interfaces-feel-better, impeccable, web-quality-skills. Index: 188 chunk, retrieval teruji.
+- [x] docs/00-KONSEP.md ditulis ulang v2.0 standar perusahaan (12 bab, tanpa istilah internal).
+- [x] Verifikasi: 4/4 route 200, label skill hilang dari HTML.
+**Status:** ⏳ Tunggu user: (1) info persis error login (screenshot/teks), (2) konfirmasi redirect URI tersimpan.
+**Next:** Login hijau → Fase 1 grill AI asli (butuh OpenRouter key).
+
 ## 2026-09-13 — Sesi 05: Secret Google + PG lokal + OAuth hidup
 **Fase:** Fase 0 (auth real, uji end-to-end)
 **Dikerjakan:**
