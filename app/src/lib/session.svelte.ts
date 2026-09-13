@@ -5,8 +5,8 @@ import { browser } from '$app/environment';
 
 export interface Profile {
 	name: string;
-	role: string;
-	idea: string;
+	experience: string;
+	goals: string[];
 }
 
 export const session = $state({
@@ -61,7 +61,15 @@ export function restoreSession() {
 		const raw = storageGet(KEY_PROFILE);
 		if (raw) {
 			const p = JSON.parse(raw);
-			session.profile = p.profile ?? null;
+			const prof = p.profile ?? null;
+			// Toleran profil lama {name, role, idea} → migrasi role jadi experience.
+			session.profile = prof
+				? {
+						name: prof.name ?? '',
+						experience: prof.experience ?? prof.role ?? '',
+						goals: prof.goals ?? []
+					}
+				: null;
 			session.onboarded = p.onboarded === true;
 		}
 	} catch {

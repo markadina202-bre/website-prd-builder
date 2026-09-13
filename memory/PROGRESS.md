@@ -2,6 +2,15 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 14: Onboarding ikut referensi user
+**Dikerjakan:**
+- [x] Langkah 2 → "Pengalaman Ngoding Kamu" (Pemula/Menengah/Ahli + deskripsi, pilih 1).
+- [x] Langkah 3 → "Apa yang Kamu Harapkan?" (5 goals multi-pilih chips) + tombol "Mulai Sekarang" → dashboard.
+- [x] Profil: {nama, experience, goals} + migrasi toleran profil lama; langkah 1 tak berubah.
+- [x] Verifikasi: check 0, build OK, 8/8 route 200.
+**Status:** ⏳ Preview LIVE. Tunggu Google client_secret (login Google) + review user.
+**Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
+
 ## 2026-09-13 — Sesi 13: Restore #2 → server nyala lagi
 **Dikerjakan:**
 - [x] Restore sandbox ke-2 (pola identik M-039): git reset, .env/node_modules/venv/pgdata/build hilang, proses mati.

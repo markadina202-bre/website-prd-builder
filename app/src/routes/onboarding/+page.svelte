@@ -4,12 +4,26 @@
 
 	let step = $state(1);
 	let name = $state(session.profile?.name ?? '');
-	let role = $state(session.profile?.role ?? '');
-	let idea = $state('');
+	let experience = $state(session.profile?.experience ?? '');
+	let goals = $state<string[]>(session.profile?.goals ?? []);
 	let err = $state('');
 
-	const ROLES = ['Pemilik usaha', 'Karyawan / profesional', 'Pelajar / mahasiswa', 'Developer / maker'];
-	const LETTERS = ['a', 'b', 'c', 'd'];
+	const EXPERIENCES = [
+		{ t: 'Pemula', d: 'Belum pernah atau baru mulai ngoding' },
+		{ t: 'Menengah', d: 'Udah bisa bikin project sendiri' },
+		{ t: 'Ahli', d: 'Pengalaman production & tim' }
+	];
+	const GOALS = [
+		'Bikin app pakai AI',
+		'Belajar konsep dasar coding',
+		'Paham cara pakai AI tools',
+		'Bikin rencana project yang jelas',
+		'Dapat mentoring langsung'
+	];
+
+	function toggleGoal(g: string) {
+		goals = goals.includes(g) ? goals.filter((x) => x !== g) : [...goals, g];
+	}
 
 	function next() {
 		err = '';
@@ -17,7 +31,7 @@
 			err = 'Isi namamu dulu ya.';
 			return;
 		}
-		if (step === 2 && !role) {
+		if (step === 2 && !experience) {
 			err = 'Pilih salah satu.';
 			return;
 		}
@@ -26,13 +40,12 @@
 	}
 
 	function finish() {
-		saveProfile({ name: name.trim(), role, idea: idea.trim() });
-		if (idea.trim()) {
-			session.pendingIdea = idea.trim();
-			goto('/project/baru/grill');
-		} else {
-			goto('/dashboard');
+		if (goals.length === 0) {
+			err = 'Pilih minimal satu.';
+			return;
 		}
+		saveProfile({ name: name.trim(), experience, goals });
+		goto('/dashboard');
 	}
 
 	function skip() {
@@ -66,31 +79,38 @@
 			/>
 		</label>
 	{:else if step === 2}
-		<h1 class="mt-5 font-display text-3xl font-bold tracking-tight">Kamu sehari-hari sebagai apa?</h1>
-		<p class="mt-1.5 text-sm text-ink-500">Biar nada tanya jawab pas dengan duniamu.</p>
+		<h1 class="mt-5 font-display text-3xl font-bold tracking-tight">Pengalaman Ngoding Kamu</h1>
+		<p class="mt-1.5 text-sm text-ink-500">Pilih yang paling sesuai sama kondisi kamu sekarang.</p>
 		<div class="mt-5 space-y-2">
-			{#each ROLES as r, i}
-				{@const on = role === r}
+			{#each EXPERIENCES as e}
+				{@const on = experience === e.t}
 				<button
-					onclick={() => (role = r)}
-					class="flex w-full items-center gap-3 rounded-xl border px-3.5 py-3 text-left text-sm transition active:scale-[.99] {on
-						? 'border-ink-950 bg-ink-950 font-bold text-paper'
-						: 'border-ink-900/15 font-medium hover:border-ink-950'}"
+					onclick={() => (experience = e.t)}
+					class="w-full rounded-xl border px-4 py-3.5 text-left transition active:scale-[.99] {on
+						? 'border-ink-950 bg-ink-950 text-paper'
+						: 'border-ink-900/15 hover:border-ink-950'}"
 				>
-					<span class="grid h-6 w-6 shrink-0 place-items-center rounded-md border font-mono text-xs font-semibold {on ? 'border-paper/40' : 'border-ink-900/20 text-ink-500'}">{LETTERS[i]}</span>
-					{r}
+					<p class="text-sm font-bold">{e.t}</p>
+					<p class="mt-0.5 text-xs {on ? 'text-paper/70' : 'text-ink-500'}">{e.d}</p>
 				</button>
 			{/each}
 		</div>
 	{:else}
-		<h1 class="mt-5 font-display text-3xl font-bold tracking-tight">Ada ide yang mau digarap?</h1>
-		<p class="mt-1.5 text-sm text-ink-500">Tulis 1–2 kalimat — langsung masuk ke ruang tanya jawab. Boleh dikosongkan.</p>
-		<textarea
-			bind:value={idea}
-			rows="4"
-			placeholder="cth: aplikasi kasir untuk toko kelontong saya biar rekap otomatis"
-			class="mt-5 w-full rounded-xl border border-ink-900/15 px-3.5 py-3 text-sm outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20"
-		></textarea>
+		<h1 class="mt-5 font-display text-3xl font-bold tracking-tight">Apa yang Kamu Harapkan?</h1>
+		<p class="mt-1.5 text-sm text-ink-500">Pilih satu atau lebih yang sesuai sama tujuanmu.</p>
+		<div class="mt-5 flex flex-wrap gap-2">
+			{#each GOALS as g}
+				{@const on = goals.includes(g)}
+				<button
+					onclick={() => toggleGoal(g)}
+					class="rounded-full border px-4 py-2.5 text-sm font-bold transition active:scale-[.97] {on
+						? 'border-ink-950 bg-ink-950 text-paper'
+						: 'border-ink-900/15 hover:border-ink-950'}"
+				>
+					{on ? '✓ ' : ''}{g}
+				</button>
+			{/each}
+		</div>
 	{/if}
 
 	{#if err}<p class="mt-3 text-sm font-semibold text-signal-600">{err}</p>{/if}
@@ -100,7 +120,7 @@
 			<button onclick={() => { step -= 1; err = ''; }} class="rounded-xl px-4 py-3 text-sm font-bold text-ink-500 transition hover:text-ink-950">← Kembali</button>
 		{/if}
 		<button onclick={next} class="flex-1 rounded-xl bg-ink-950 px-4 py-3 text-sm font-bold text-paper transition hover:bg-ink-900 active:scale-[.99]">
-			{step === 3 ? 'Mulai tanya jawab →' : 'Lanjut'}
+			{step === 3 ? 'Mulai Sekarang' : 'Lanjut'}
 		</button>
 	</div>
 </div>
