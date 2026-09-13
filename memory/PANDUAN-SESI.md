@@ -32,8 +32,23 @@
 ## Tutup sesi (wajib)
 1. PROGRESS entri baru di ATAS + MEMORY/DECISIONS/POLA bila ada fakta/keputusan/pola baru.
 2. `npm run check` → `npm run build` → restart preview → curl semua route → catat bukti di PROGRESS.
-3. `git add -A && git commit -m "Sesi NN: ..." && git push origin arena/01a09aee-website-prd-builder` → verifikasi `ls-remote` == `rev-parse HEAD`.
+3. `./scripts/simpan.sh "Sesi NN: ..."` (add+commit+push+verifikasi otomatis) → pastikan keluar `OK tersimpan`.
 4. Balasan user: selesai+bukti, butuh user (persis), next step. Update tabel **Status terkini** di atas bila keadaan berubah.
+
+## Simpan otomatis tiap progres kecil (WAJIB — tak ada ingatan terbuang)
+Prinsip: JANGAN tunggu akhir sesi. Satu pemicu saja → langsung catat + simpan (±30 detik).
+| Pemicu | Catat di |
+|---|---|
+| 1 file/grup kecil selesai + terverifikasi | PROGRESS (entri Sesi NN berjalan) |
+| Bug ditemukan / diperbaiki | PROGRESS (+ MEMORY bila permanen) |
+| Keputusan dibuat | DECISIONS (ADR-xxx) |
+| Info penting dari user | MEMORY (M-xxx) |
+| Percobaan gagal yang berharga | PROGRESS (dead-end — jangan diulang sesi lain) |
+Prosedur mikro:
+1. Tulis catatan (lihat tabel).
+2. `./scripts/simpan.sh "Sesi NN: <singkat>"` → wajib keluar `OK tersimpan` (remote == lokal).
+3. Verifikasi gagal → STOP, bereskan dulu sebelum kerja lain.
+Larang: >3 perubahan tak-berhubungan dalam 1 commit; mengakhiri giliran dengan file tak-tersimpan.
 
 ## Perintah kunci
 | Perlu | Perintah |
@@ -47,7 +62,7 @@
 | Hitung tabel | `../.venv-pg/lib/python3.11/site-packages/pgserver/pginstall/bin/psql -h 127.0.0.1 -p 5433 -U postgres prdbuilder -tAc "SELECT count(*) FROM information_schema.tables WHERE table_schema='public'"` |
 | Uji OAuth | `curl -X POST localhost:5173/api/auth/sign-in/social -H 'Content-Type: application/json' -d '{"provider":"google","callbackURL":"/dashboard"}'` |
 | Cek harga DB | `curl -s localhost:5173/api/prices` |
-| Commit | `git add -A && git commit -m "..." && git push origin arena/01a09aee-website-prd-builder && git ls-remote origin arena/01a09aee-website-prd-builder` |
+| Simpan tiap progres | `./scripts/simpan.sh "Sesi NN: ..."` (add+commit+push+verifikasi — WAJIB tiap progres kecil) |
 
 ## Peta secret (isi `.env`, gitignored, chmod 600)
 | Var | Status | Keterangan |

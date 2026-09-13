@@ -10,6 +10,7 @@
 - [x] Baru: memory/PANDUAN-SESI.md (checklist buka/tutup, perintah kunci, peta repo, recovery restore, proses hidup).
 - [x] Verifikasi: index rebuild 0-change + search OK; push terverifikasi.
 - [x] Lanjutan (atas pertanyaan user): PANDUAN-SESI dilengkapi — status terkini, diagnosis cepat, peta secret, nama branch asli.
+- [x] Lanjutan 2 (atas perintah user): aturan simpan-OTOMATIS tiap progres kecil + `scripts/simpan.sh` (add+commit+push+verifikasi).
 **Status:** ✅ Pewarisan lengkap. Tunggu Google client_secret + review + instruksi.
 **Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
 

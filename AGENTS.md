@@ -15,8 +15,10 @@
 - Klaim "selesai" WAJIB bukti: check hijau, build OK, curl 200, SELECT count, potongan log.
 - Output push menipu: baris "hint fast-forward" = DITOLAK. Verifikasi push HANYA via ls-remote vs rev-parse.
 
-## 3. Wajib tulis setiap ada progress
-- `memory/PROGRESS.md`: entri Sesi NN di PALING ATAS (tanggal, checklist dikerjakan, status, next).
+## 3. Simpan OTOMATIS tiap progres kecil — tak ada ingatan terbuang
+- JANGAN tunggu akhir sesi. Tiap progres sekecil apa pun (1 file beres, 1 bug ketemu, 1 keputusan, 1 info user, 1 percobaan gagal yang berharga) → LANGSUNG: catat di PROGRESS (entri berjalan Sesi NN) → `./scripts/simpan.sh "Sesi NN: ..."` (add+commit+push+verifikasi).
+- Wajib: akhiri SETIAP giliran kerja dengan tree bersih (sudah commit+push+terverifikasi `OK tersimpan`).
+- Dilarang: menumpuk >3 perubahan tak-berhubungan dalam 1 commit; mengakhiri giliran dengan file tak-tersimpan.
 - Fakta permanen → MEMORY.md (M-xxx lanjut). Keputusan → DECISIONS.md (ADR-xxx). Pola pikir → POLA-PIKIR.md (P-xxx).
 - Nomor lanjut, jangan timpa. Bahasa: Indonesia.
 
