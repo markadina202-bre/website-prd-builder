@@ -2,6 +2,18 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 03: Scaffold skeleton + live preview
+**Fase:** Fase 0-skeleton (mock, tanpa kredensial)
+**Dikerjakan:**
+- [x] Scaffold manual SvelteKit 2 + Svelte 5 + Tailwind v4 di `app/` (npm install 69 pkgs/13s).
+- [x] Halaman: landing, login mock, dashboard, project/{grill,abcd,wayfinder,canvas}.
+- [x] Mock SkillRunner grill: 8 pertanyaan scripted 1-per-giliran + skor ketajaman + panel CONTEXT.md live + prefill ABCD.
+- [x] Fix preview sandbox: `allowedHosts: ['.e2b.app']` (leading-dot wildcard, terverifikasi di source Vite).
+- [x] CI GitHub Actions (`ci.yml`): install + check + build untuk tiap push app/.
+- [x] Verifikasi: 7/7 route HTTP 200, dev server live port 5173.
+**Status:** ✅ Skeleton LIVE. Menunggu kredensial real (Neon DATABASE_URL + Google OAuth) untuk Fase 0 penuh.
+**Next:** (1) Kredensial dari user → Better Auth + Drizzle real. (2) OpenRouter key → grill AI asli.
+
 ## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
 **Fase:** Pra-Fase 0 (keputusan stack)
 **Dikerjakan:**
