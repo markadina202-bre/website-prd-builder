@@ -16,7 +16,7 @@
 ## 2026-09-13 — Sesi 08: Login+demo mati → server production + rollback Sesi 07
 **Dikerjakan:**
 - [x] User lapor login Google DAN demo mati. Audit: kode login benar, tak ada kebocoran modul server → build production BERSIH (tak ada error tersembunyi).
-- [x] INSIDEN: Sesi 07 (hardening localStorage + M-027 + commit e3c4c76) HILANG TOTAL — workspace rollback ke Sesi 06. Diterapkan ulang di sesi ini + diverifikasi via git log.
+- [x] INSIDEN (ralat Sesi 09): Sesi 07 hanya hilang di workspace LOKAL — commit e3c4c76 ternyata ADA di remote. Push Sesi 08–09 sempat DITOLAK (non-fast-forward, disalahbaca sukses) → diperbaiki via force-with-lease setelah verifikasi lokal superset remote. Lihat M-029/M-034.
 - [x] Switch preview ke PRODUCTION: adapter-auto → adapter-node, `vite preview` port 5173 (URL preview TETAP), env via source .env. Alasan: bundel tunggal, tanpa HMR, anti-cache-acak.
 - [x] Verifikasi prod: 4/4 route 200, OAuth URL valid, get-session null ✅.
 **Status:** ⏳ Tunggu user: buka ulang preview (hard-refresh) → coba demo + Google → lapor persis yang terjadi.
