@@ -2,6 +2,14 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 11: Kredensial Google masuk → OAuth hidup lagi
+**Dikerjakan:**
+- [x] User kirim ulang kredensial (format JSON client_secret Google, parse manual akibat format chat) → app/.env (600, gitignored), preview restart.
+- [x] Log lama buktikan user klik login 3x saat kredensial kosong (CLIENT_ID_AND_SECRET_REQUIRED) → user aktif testing.
+- [x] Verifikasi: POST sign-in → accounts.google.com + client_id benar + redirect preview + PKCE ✅; verification rows: 4 ✅.
+**Status:** ⏳ Tunggu user KLIK login di tab baru + konfirmasi redirect URI tersimpan di Google Console (belum pernah dikonfirmasi sejak Sesi 05!).
+**Next:** Login hijau → Fase 1 grill AI asli (OpenRouter key).
+
 ## 2026-09-13 — Sesi 10: Logo Google + riset kompetitor + referensi scale
 **Dikerjakan:**
 - [x] Logo Google: huruf "G" → SVG resmi 4-warna di tombol login.
