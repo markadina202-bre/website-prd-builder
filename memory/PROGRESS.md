@@ -2,6 +2,15 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 13: Restore #2 → server nyala lagi
+**Dikerjakan:**
+- [x] Restore sandbox ke-2 (pola identik M-039): git reset, .env/node_modules/venv/pgdata/build hilang, proses mati.
+- [x] Recovery rutin: set-branches+fetch+reset (4c93651, bersih) → npm ci → venv+PG16+initdb → createdb → .env baru → migrate 13/13 → rebuild → preview+PG nyala.
+- [x] Google client_secret hilang lagi → .env pakai secret kosong (login Google mati sementara, demo full jalan). Client ID (publik) diisi ulang.
+- [x] Verifikasi: 8/8 route 200 ✅.
+**Status:** ⏳ Preview LIVE. Tunggu user kirim ulang Google client_secret (ke-2x).
+**Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
+
 ## 2026-09-13 — Sesi 12: Redirect URI confirmed + onboarding 3 langkah
 **Dikerjakan:**
 - [x] User KONFIRMASI redirect URI callback tersimpan di Google Console (blocker Sesi 05–11 selesai!).
