@@ -24,6 +24,18 @@
 		goto('/login');
 	}
 
+	// Onboarding: sudah login tapi belum kenalan → /onboarding (kecuali di sana / di login)
+	$: if (
+		browser &&
+		email &&
+		!$realSession?.isPending &&
+		!session.onboarded &&
+		$page.url.pathname !== '/onboarding' &&
+		$page.url.pathname !== '/login'
+	) {
+		goto('/onboarding');
+	}
+
 	function logout() {
 		signOut();
 		mockLogout();

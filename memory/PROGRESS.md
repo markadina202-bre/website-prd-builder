@@ -2,6 +2,15 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 12: Redirect URI confirmed + onboarding 3 langkah
+**Dikerjakan:**
+- [x] User KONFIRMASI redirect URI callback tersimpan di Google Console (blocker Sesi 05–11 selesai!).
+- [x] Onboarding `/onboarding` 3 langkah: (1) Nama (copy persis user), (2) Peran a/b/c/d, (3) Ide → langsung jadi jawaban pertama grill. Skip + validasi + progress.
+- [x] session.svelte.ts: profile/onboarded/pendingIdea + persist aman; layout redirect otomatis login→onboarding; dashboard sapa nama.
+- [x] Verifikasi: check 0, build OK, 8/8 route 200 (termasuk /onboarding), OAuth valid.
+**Status:** ⏳ Tunggu user KLIK login (semua prasyarat hijau).
+**Next:** Login hijau → Fase 1 grill AI asli (OpenRouter key).
+
 ## 2026-09-13 — Sesi 11: Kredensial Google masuk → OAuth hidup lagi
 **Dikerjakan:**
 - [x] User kirim ulang kredensial (format JSON client_secret Google, parse manual akibat format chat) → app/.env (600, gitignored), preview restart.

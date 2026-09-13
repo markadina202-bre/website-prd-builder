@@ -2,12 +2,20 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { grill } from '$lib/grill.svelte';
+	import { session } from '$lib/session.svelte';
 
 	let input = '';
 	let box: HTMLDivElement;
 	$: id = $page.params.id;
 
-	onMount(() => grill.start());
+	onMount(() => {
+		grill.start();
+		// Ide dari onboarding langsung jadi jawaban pertama.
+		if (session.pendingIdea) {
+			grill.answer(session.pendingIdea);
+			session.pendingIdea = null;
+		}
+	});
 	$: if (grill.messages.length && box) box.scrollTop = box.scrollHeight;
 
 	function send(text: string = input) {

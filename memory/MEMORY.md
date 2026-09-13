@@ -30,6 +30,7 @@
 - M-038: docs/06 = referensi arsitektur 1M concurrent (dari user, verbatim) → adaptasi SvelteKit bertahap; mulai 1 region + OpenRouter.
 - M-039: Restore sandbox = .git reset ke 57d8e33 + .env*/node_modules/.venv-pg/.pgdata/proses HILANG (file tree utuh). Recovery: `set-branches --add` + fetch + `reset --mixed` (tree tak tersentuh) → npm ci → venv+initdb+migrate → .env baru. Secret user-issued (Google/Neon) WAJIB diminta ulang — tak ada backup by design.
 - M-040: Kredensial Google datang format JSON client_secret_*.json (web.client_id + web.client_secret) — chat formatting bisa merusak JSON (link markdown), parse manual 2 nilainya. Secret baru = GOCSPX-... (nilai hanya di .env, jangan echo).
+- M-041: Alur login = /login → /dashboard → auto /onboarding (bila belum) → dashboard/grill. Profil (nama/peran/ide) di localStorage aman + session store; ide onboarding → pendingIdea → jawaban grill pertama. Nanti: tabel profile + server-side.
 - M-030: Nama produk "Form ABCD" → "Form" (struktur ABCD tetap internal). Route `/abcd` → `/form` (bookmark lama 404, beta = OK). Tabel DB `abcd` TIDAK diganti (hindari migrasi sia-sia).
 - M-031: n8n canvas = Vue Flow (xyflow). SvelteKit = @xyflow/svelte: `bind:nodes/bind:edges`, node custom via `nodeTypes`, WAJIB browser-guard (SSR crash), simpan state manual.
 - M-032: `as` cast TIDAK boleh di `{#each}` Svelte (parse error) → data bertipe di `<script>`. `{@const}` hanya anak langsung block — di dalam div biasa = error.

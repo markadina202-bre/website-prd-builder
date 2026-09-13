@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { MOCK_PROJECTS } from '$lib/mock';
+	import { session } from '$lib/session.svelte';
 
 	function createProject() {
 		goto('/project/baru/grill'); // skeleton — nanti: remote function project.create
@@ -11,7 +12,9 @@
 	<div>
 		<p class="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-brand-700">Dashboard</p>
 		<h1 class="mt-1 font-display text-3xl font-bold tracking-tight">Proyekku</h1>
-		<p class="mt-1 text-sm text-ink-500">Lanjutkan garapan atau mulai ide baru.</p>
+		<p class="mt-1 text-sm text-ink-500">
+			{#if session.profile?.name}Halo, {session.profile.name}! {/if}Lanjutkan garapan atau mulai ide baru.
+		</p>
 	</div>
 	<button onclick={createProject} class="rounded-xl bg-ink-950 px-4 py-2.5 font-bold text-paper transition hover:bg-ink-900 active:scale-[.98]">
 		+ Proyek baru
