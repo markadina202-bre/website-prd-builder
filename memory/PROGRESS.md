@@ -11,8 +11,18 @@
 - [x] Fix preview sandbox: `allowedHosts: ['.e2b.app']` (leading-dot wildcard, terverifikasi di source Vite).
 - [x] CI GitHub Actions (`ci.yml`): install + check + build untuk tiap push app/.
 - [x] Verifikasi: 7/7 route HTTP 200, dev server live port 5173.
-**Status:** ✅ Skeleton LIVE. Menunggu kredensial real (Neon DATABASE_URL + Google OAuth) untuk Fase 0 penuh.
-**Next:** (1) Kredensial dari user → Better Auth + Drizzle real. (2) OpenRouter key → grill AI asli.
+**Status:** ✅ Skeleton LIVE (dilanjutkan Sesi 04 di bawah).
+
+## 2026-09-13 — Sesi 04: Wiring Neon + Better Auth (siap colok)
+**Fase:** Fase 0 (DB + auth real)
+**Dikerjakan:**
+- [x] Install: better-auth 1.7.4, drizzle-orm, @neondatabase/serverless, drizzle-kit, @types/node.
+- [x] Kode: `auth.ts` (Google provider), `db/` (auth-schema 4 tabel + app-schema 9 tabel), `drizzle.config.ts`, `hooks.server.ts`, `/api/auth/[...all]`, `auth-client.ts`, login real + fallback mock, `.env.example`.
+- [x] Migrasi `drizzle/0000_init.sql` ter-generate (13 CREATE TABLE). Pelajaran: `useSession()` Svelte = store `{data,error,isPending}` → baca `$s.data.user`.
+- [x] Verifikasi: svelte-check 0 error, build OK, `/api/auth/get-session` 200.
+- [ ] User sudah sambung Neon↔GitHub, tapi connection string belum sampai ke sandbox (secrets tak terbaca via API).
+**Status:** ⏳ Kode 100% siap. Tunggu user paste DATABASE_URL (+ Google OAuth) untuk push schema & login real.
+**Next:** Terima DATABASE_URL → `drizzle-kit push` → test login Google end-to-end.
 
 ## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
 **Fase:** Pra-Fase 0 (keputusan stack)
