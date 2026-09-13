@@ -2,6 +2,16 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 15: Halaman admin + harga dinamis
+**Dikerjakan:**
+- [x] Migrasi 0001: tabel site_settings + seed price_pro 49000 / price_team 199000 (lokal ✅; Neon ikut via CI migrate).
+- [x] API: GET /api/prices (publik) + GET /api/admin/summary + PUT /api/admin/prices (gate: 401 tanpa login, 403 bukan admin; ADMIN_EMAILS kosong = mode sementara).
+- [x] Halaman /admin: 4 kartu statistik, form harga Pro/Team (preview Rp + simpan → landing ikut berubah), 10 pengguna terbaru, banner mode sementara, link nav Admin.
+- [x] Landing: harga SSR dari DB via +page.server.ts (fallback 49rb/199rb).
+- [x] Verifikasi: check 0, build OK, /admin 200, prices {"pro":49000,"team":199000}, summary 401 tanpa sesi, upsert SQL teruji + revert.
+**Status:** ⏳ PR DIBATALKAN user ("jangan dulu"). Tunggu instruksi + Google client_secret + review.
+**Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
+
 ## 2026-09-13 — Sesi 14: Onboarding ikut referensi user
 **Dikerjakan:**
 - [x] Langkah 2 → "Pengalaman Ngoding Kamu" (Pemula/Menengah/Ahli + deskripsi, pilih 1).

@@ -110,3 +110,10 @@ export const payment = pgTable('payment', {
 	status: text('status').notNull().default('pending'),
 	createdAt: timestamp('created_at').notNull().defaultNow()
 });
+
+// Pengaturan situs key-value (harga dsb) — diubah via /admin.
+export const siteSettings = pgTable('site_settings', {
+	key: text('key').primaryKey(),
+	value: text('value').notNull(),
+	updatedAt: timestamp('updated_at').notNull().defaultNow()
+});

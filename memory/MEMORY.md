@@ -32,6 +32,7 @@
 - M-040: Kredensial Google datang format JSON client_secret_*.json (web.client_id + web.client_secret) — chat formatting bisa merusak JSON (link markdown), parse manual 2 nilainya. Secret baru = GOCSPX-... (nilai hanya di .env, jangan echo).
 - M-041: Onboarding 3 langkah: (1) Nama, (2) Pengalaman ngoding Pemula/Menengah/Ahli, (3) Goals multi-pilih → dashboard. Profil {nama, experience, goals} di localStorage aman + migrasi profil lama. Nanti: tabel profile + server-side.
 - M-042: Restore #2 = pola identik (recovery kini rutin ±5 mnt). Tambahan: app/build ikut hilang (excluded) → WAJIB `npm run build` sebelum preview. Client ID Google (publik) boleh diisi ulang dari memori; client_secret SELALU minta ulang ke user.
+- M-043: Admin skeleton: tabel site_settings (key/value) + API + gate ADMIN_EMAILS (kosong = terbuka sementara + banner). Harga landing SSR dari DB + fallback. Migrasi tulis tangan: file SQL + entri _journal.json (migrate OK tanpa snapshot baru). Produksi: role admin di DB + kunci env.
 - M-030: Nama produk "Form ABCD" → "Form" (struktur ABCD tetap internal). Route `/abcd` → `/form` (bookmark lama 404, beta = OK). Tabel DB `abcd` TIDAK diganti (hindari migrasi sia-sia).
 - M-031: n8n canvas = Vue Flow (xyflow). SvelteKit = @xyflow/svelte: `bind:nodes/bind:edges`, node custom via `nodeTypes`, WAJIB browser-guard (SSR crash), simpan state manual.
 - M-032: `as` cast TIDAK boleh di `{#each}` Svelte (parse error) → data bertipe di `<script>`. `{@const}` hanya anak langsung block — di dalam div biasa = error.

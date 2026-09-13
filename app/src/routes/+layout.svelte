@@ -52,6 +52,7 @@
 		</a>
 		<div class="flex items-center gap-3 text-sm">
 			{#if email}
+				<a href="/admin" class="font-mono text-xs uppercase tracking-widest text-ink-500 transition hover:text-ink-950">Admin</a>
 				<span class="hidden font-mono text-xs text-ink-500 sm:inline">{email}</span>
 				<button onclick={logout} class="rounded-lg border border-ink-900/15 bg-white px-3 py-1.5 font-semibold transition hover:bg-ink-950 hover:text-paper active:scale-[.98]">Keluar</button>
 			{:else}

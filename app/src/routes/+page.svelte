@@ -1,4 +1,8 @@
 <script lang="ts">
+	let { data }: { data: { pro: number; team: number } } = $props();
+	function rp(v: number): string {
+		return v % 1000 === 0 ? `Rp${v / 1000}rb` : `Rp${v.toLocaleString('id-ID')}`;
+	}
 	interface Plan {
 		name: string;
 		price: string;
@@ -6,11 +10,11 @@
 		feats: string[];
 		hot: boolean;
 	}
-	const PLANS: Plan[] = [
+	const PLANS = $derived<Plan[]>([
 		{ name: 'Gratis', price: 'Rp0', per: 'selamanya', feats: ['1 proyek', '100 pesan tanya jawab/bln', 'Export Markdown'], hot: false },
-		{ name: 'Pro', price: 'Rp49rb', per: '/bln', feats: ['Proyek & tanya jawab tanpa batas', 'Export PDF/DOCX/PPTX', 'Canvas unlimited + skor PRD'], hot: true },
-		{ name: 'Team', price: 'Rp199rb', per: '/bln', feats: ['5 seat workspace', 'Kolaborasi realtime', 'Audit log + API'], hot: false }
-	];
+		{ name: 'Pro', price: rp(data.pro), per: '/bln', feats: ['Proyek & tanya jawab tanpa batas', 'Export PDF/DOCX/PPTX', 'Canvas unlimited + skor PRD'], hot: true },
+		{ name: 'Team', price: rp(data.team), per: '/bln', feats: ['5 seat workspace', 'Kolaborasi realtime', 'Audit log + API'], hot: false }
+	]);
 	const STEPS: [string, string, string][] = [
 		['01', 'Tanya Jawab', 'AI tanya 1-per-1 sampai ide tajam'],
 		['02', 'Form', 'Kuesioner a/b/c + tulis, auto-terisi'],
