@@ -8,7 +8,8 @@ if (!url) {
 	process.exit(1);
 }
 
-const sql = postgres(url, { prepare: false, ssl: 'require' });
+const isLocal = url.includes('127.0.0.1') || url.includes('@localhost');
+const sql = postgres(url, { prepare: false, ...(isLocal ? {} : { ssl: 'require' }) });
 try {
 	const rows = await sql`SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY tablename`;
 	console.log(`TABLES (${rows.length}):`, rows.map((r) => r.tablename).join(', '));

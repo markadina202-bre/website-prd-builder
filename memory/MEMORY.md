@@ -18,7 +18,8 @@
 - M-014: Webhook pembayaran wajib: verifikasi signature + idempotent (dedup gateway ref) + retry via Inngest.
 - M-015: Rust = sidecar opsional (`services/rust/`): search engine index, worker PDF, auto-layout WASM, verifier. App harus jalan tanpa Rust (fallback JS). Jangan bangun sebelum ada bottleneck nyata.
 - M-024: Neon project: ep-lingering-poetry-ayt5jp8v (pooler, us-east-2). Kredensial HANYA di app/.env (gitignored, chmod 600) — JANGAN tulis password ke repo/chat ulang.
-- M-025: Sandbox Arena = egress allowlist (github/npm OK; contoh, neon, dsb di-RST). DB driver = postgres-js TCP (`prepare:false`, `ssl:require`); neon-http TIDAK bisa dari sandbox. Migrasi produksi via CI (.github/workflows/migrate.yml + secret DATABASE_URL).
+- M-025: Sandbox Arena = egress allowlist (github/npm/pypi OK; neon/maven/apt DEB di-RST). DB driver = postgres-js TCP (`prepare:false`, ssl hanya non-lokal); neon-http TIDAK bisa dari sandbox. Migrasi produksi via CI (.github/workflows/migrate.yml + secret DATABASE_URL). Dev sandbox = PG lokal 127.0.0.1:5433 (binari pgserver, data .pgdata/).
+- M-026: Kode server SvelteKit WAJIB baca env via `$env/dynamic/private` — Vite TIDAK mengisi `process.env` dari .env (terbukti: fallback dummy kepakai, `[db]` log). drizzle-kit aman karena hanya membaca file schema. File attach chat TIDAK sampai ke sandbox (3x gagal) — minta user paste teks.
 
 ## Bisnis
 - M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat). [CONFIRMED user 2026-09-13]

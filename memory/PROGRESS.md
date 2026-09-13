@@ -2,6 +2,18 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 05: Secret Google + PG lokal + OAuth hidup
+**Fase:** Fase 0 (auth real, uji end-to-end)
+**Dikerjakan:**
+- [x] Attach PDF 3x GAGAL sampai (uploads/ tidak ada) → user paste secret teks → tersimpan app/.env (gitignored).
+- [x] Temuan: user sempat klik login → log buktikan better-auth mencapai tahap insert verification (config benar, tinggal DB).
+- [x] PG lokal: apt & Maven DIBLOKIR, tapi PyPI BUKA → pgserver → binari PG16 TCP 127.0.0.1:5433 (API pgserver socket-only, jadi jalankan binari langsung foreground; argv[0] harus full path).
+- [x] app/.env → PG lokal (Neon dibackup .env.neon); migrasi lokal 13/13 ✅.
+- [x] ROOT CAUSE auth gagal: Vite tidak isi process.env dari .env → pindah ke $env/dynamic/private (+ log `[db]` diagnostik, tanpa secret).
+- [x] Verifikasi: POST sign-in/social → URL accounts.google.com valid (client_id + redirect preview + PKCE) ✅; verification rows: 1 ✅; svelte-check 0 error.
+**Status:** ✅ OAuth server-side 100%. Tinggal KLIK user di preview (butuh redirect URI tersimpan di Google Console).
+**Next:** User klik login → lapor hasil (sukses / redirect_uri_mismatch?) → Fase 1 grill AI asli (butuh OpenRouter key).
+
 ## 2026-09-13 — Sesi 03: Scaffold skeleton + live preview
 **Fase:** Fase 0-skeleton (mock, tanpa kredensial)
 **Dikerjakan:**
