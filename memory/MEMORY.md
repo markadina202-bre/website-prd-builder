@@ -18,7 +18,7 @@
 - M-014: Webhook pembayaran wajib: verifikasi signature + idempotent (dedup gateway ref) + retry via Inngest.
 
 ## Bisnis
-- M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat).
+- M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat). [CONFIRMED user 2026-09-13]
 - M-021: Gateway ID = Midtrans Snap (QRIS 0,7%, ShopeePay/GoPay/OVO/DANA, VA, kartu, retail). Cadangan: Xendit (kalau butuh disbursement).
 - M-022: Gateway INTL = Polar (utama), Lemon Squeezy (cadangan). Keduanya Merchant-of-Record.
 - M-023: Auth utama = Login Gmail (Google OAuth). Tanpa password wajib.

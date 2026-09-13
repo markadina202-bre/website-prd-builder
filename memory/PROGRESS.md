@@ -2,6 +2,15 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
+**Fase:** Pra-Fase 0 (keputusan stack)
+**Dikerjakan:**
+- [x] User APPROVE: definisi ABCD (Audience/Business/Capabilities/Details) → ADR-004 CONFIRMED.
+- [x] User APPROVE: harga Pro Rp49rb/bln, Team Rp199rb/bln → M-020 CONFIRMED.
+- [ ] User bertanya: alternatif lebih baik dari Next.js (hemat resource, ringan, cepat, mudah maintain) → dijawab: SvelteKit. Menunggu keputusan → ADR-006 PROPOSED.
+**Status:** ⏳ Menunggu keputusan stack (SvelteKit vs Next.js) sebelum scaffold Fase 0.
+**Next:** Jika SvelteKit → update M-010, ADR-001, docs/02, docs/04 Fase 0, lalu scaffold.
+
 ## 2026-09-13 — Sesi 01: Riset + Rancangan + Instalasi Skill
 **Fase:** Pra-Fase 0 (konsep & fondasi pengetahuan)
 **Dikerjakan:**
