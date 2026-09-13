@@ -9,7 +9,7 @@
 
 cache.format = kv/1
 cache.indexed_at = 2026-09-13
-cache.count = 31
+cache.count = 42
 cache.index = skills/index/
 
 # --- 01. frontend-design (UI anti AI-slop) ---
@@ -277,3 +277,97 @@ skill.31.url = https://github.com/addyosmani/web-quality-skills/tree/main/skills
 skill.31.install = npx skills add https://github.com/addyosmani/web-quality-skills
 skill.31.role = Koleksi: accessibility (WCAG), best-practices, core-web-vitals (LCP/INP/CLS), performance, seo.
 skill.31.use_in_project = Quality gate pra-rilis tiap halaman: skor a11y + vitals + SEO dasar (meta, semantic, sitemap saat landing publik).
+
+# --- 32. to-spec (percakapan → spec, FASE 5) ---
+skill.32.id = to-spec
+skill.32.repo = mattpocock/skills
+skill.32.url = https://github.com/mattpocock/skills
+skill.32.file = skills/to-spec/SKILL.md
+skill.32.install = npx skills@latest add mattpocock/skills
+skill.32.role = Sintesis spec dari konteks yang sudah ada TANPA wawancara: seams testing dulu, template Problem/Solution/User Stories/Implementation/Testing/Out-of-scope, tanpa path file.
+skill.32.use_in_project = Mesin FASE 5 (PRD Final): grill+form+wayfinder+canvas → spec Indonesia.
+
+# --- 33. to-tickets (spec → tiket tracer-bullet, FASE 3) ---
+skill.33.id = to-tickets
+skill.33.repo = mattpocock/skills
+skill.33.url = https://github.com/mattpocock/skills
+skill.33.file = skills/to-tickets/SKILL.md
+skill.33.install = npx skills@latest add mattpocock/skills
+skill.33.role = Pecah spec jadi tiket vertical slice demoable + blocking edges; wide refactor via expand–contract; quiz granularity; kerjakan frontier.
+skill.33.use_in_project = Mesin FASE 3 (Wayfinder): fog→frontier→doing→done + destination.
+
+# --- 34. to-questionnaire (keputusan → kuesioner, FASE 2) ---
+skill.34.id = to-questionnaire
+skill.34.repo = mattpocock/skills
+skill.34.url = https://github.com/mattpocock/skills
+skill.34.file = skills/to-questionnaire/SKILL.md
+skill.34.install = npx skills@latest add mattpocock/skills
+skill.34.role = Grill the send (bukan subject): kuesioner most-important-first, 1 ide/soal, stub jawaban, why-this-matters, catch-all.
+skill.34.use_in_project = Mesin FASE 2 (Form) — SUDAH DITERAPKAN: soal + "Kenapa ditanya" + a/b/c/d.
+
+# --- 35. domain-modeling (glossary + ADR) ---
+skill.35.id = domain-modeling
+skill.35.repo = mattpocock/skills
+skill.35.url = https://github.com/mattpocock/skills
+skill.35.file = skills/domain-modeling/SKILL.md
+skill.35.install = npx skills@latest add mattpocock/skills
+skill.35.role = Disiplin aktif: tantang istilah vs glossary, skenario tepi konkret, CONTEXT.md inline (glossary saja), ADR hanya jika 3-gate lolos.
+skill.35.use_in_project = Grill (tajamkan istilah) + Canvas (node = entitas) + CONTEXT.md per proyek.
+
+# --- 36. prototype (throwaway penjawab pertanyaan) ---
+skill.36.id = prototype
+skill.36.repo = mattpocock/skills
+skill.36.url = https://github.com/mattpocock/skills
+skill.36.file = skills/prototype/SKILL.md
+skill.36.install = npx skills@latest add mattpocock/skills
+skill.36.role = 1 pertanyaan = 1 prototipe throwaway: logika→HTML mandiri, UI→variasi radikal 1 route; tanpa persistensi/polish; state terlihat; keputusan dilipat, kode dibuang ke branch.
+skill.36.use_in_project = Internal builder + calon kapabilitas produk Fase 6 (Prototoipe).
+
+# --- 37. research (riset sumber primer) ---
+skill.37.id = research
+skill.37.repo = mattpocock/skills
+skill.37.url = https://github.com/mattpocock/skills
+skill.37.file = skills/research/SKILL.md
+skill.37.install = npx skills@latest add mattpocock/skills
+skill.37.role = Agen latar riset sumber PRIMER saja (docs/kode/spec/API), tiap klaim dikutip, output 1 file MD per konvensi repo.
+skill.37.use_in_project = Pengayaan grill + tiket Research Wayfinder.
+
+# --- 38. writing-shape (tumpukan → artikel) ---
+skill.38.id = writing-shape
+skill.38.repo = mattpocock/skills
+skill.38.url = https://github.com/mattpocock/skills
+skill.38.file = skills/writing-shape/SKILL.md
+skill.38.install = npx skills@latest add mattpocock/skills
+skill.38.role = Exploit: grounding konsep, 2–3 opening (user pilih), tumbuh paragraf-per-paragraf, tumpukan = tambang, gap diberi nama, format disengaja.
+skill.38.use_in_project = Kualitas prosa FASE 5: artefak → PRD satu suara.
+
+# --- 39. wizard (pemandu prosedur manual) ---
+skill.39.id = wizard
+skill.39.repo = mattpocock/skills
+skill.39.url = https://github.com/mattpocock/skills
+skill.39.file = skills/wizard/SKILL.md
+skill.39.install = npx skills@latest add mattpocock/skills
+skill.39.role = Hasilkan wizard bash untuk langkah human-only: scope→journey→author→verify; template stages+confirm+secret-entry; ephemeral default.
+skill.39.use_in_project = INTERNAL repo: onboarding env/secret, migrasi satu-kali. Bukan fitur produk.
+
+# --- 40. prd-schema (template inti PRD) ---
+skill.40.id = prd-schema
+skill.40.repo = github/awesome-copilot
+skill.40.url = https://github.com/github/awesome-copilot
+skill.40.install = npx skills add https://github.com/github/awesome-copilot --skill prd
+skill.40.role = PRD production-grade: discovery interview dulu, skema 5 seksi (summary/UX+stories+non-goals/AI/tech/risks-roadmap), konkret terukur, larang kata kabur.
+skill.40.use_in_project = Template inti FASE 5 + rubric skor ketajaman.
+
+# --- 41. pm-copilot (pilih template PRD) ---
+skill.41.id = pm-copilot
+skill.41.repo = slgoodrich/agents
+skill.41.url = https://github.com/slgoodrich/agents
+skill.41.role = Skor kompleksitas 3 dimensi → Lean/Comprehensive/Amazon PR-FAQ/Google PRD; requirements-engineer; stress-test; fokus solo-dev.
+skill.41.use_in_project = FASE 5: penentu template per proyek + stress-test draf.
+
+# --- 42. prd-quality-gate (exit gate PRD) ---
+skill.42.id = prd-quality-gate
+skill.42.repo = jnPiyush/AgentX
+skill.42.url = https://github.com/jnPiyush/AgentX
+skill.42.role = 5 non-negotiables (bukti, terukur, intent, konsisten, handoff-ready) + discovery gate + kontrak AI 7 kolom; PASS/FAIL sebelum export.
+skill.42.use_in_project = Exit gate FASE 5 sebelum export MD/PDF/DOCX.

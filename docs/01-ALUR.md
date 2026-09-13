@@ -66,7 +66,7 @@ User boleh **lompat/mundur** antar tahap. Tiap tahap menyimpan state
 **Hook produk:** progress bar "Ketajaman ide: 42% → 87%", streak pertanyaan,
 tombol "Ke jutkan saya" (wrap up kapan pun). Panel samping live-preview CONTEXT.md.
 
-## TAHAP 2 — Form ABCD (strukturisasi)
+## TAHAP 2 — Form (kuesioner ABCD)
 **Tujuan:** kunci struktur PRD dalam 4 blok. **Auto-prefilled** dari hasil grill,
 user tinggal review/edit (bukan isi dari nol!).
 

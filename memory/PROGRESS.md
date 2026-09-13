@@ -2,6 +2,17 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 09: Form quiz + Svelte Flow canvas + redesign anti-slop + 11 skill
+**Dikerjakan:**
+- [x] ABCD → **Form**: route `/form`, 13 soal kuesioner a/b/c + d tulis-sendiri, tiap soal 1 ide + "Kenapa ditanya", prefill grill (cocok→pilih, tak cocok→d), progress bar, kunci v1 + ringkasan. Konsep ABCD tetap (struktur A/B/C/D), label UI = Form.
+- [x] Riset mattpocock (8 SKILL.md via GitHub API; raw.githubusercontent DIBLOKIR) → install 32-39: to-spec, to-tickets, to-tickets, to-questionnaire (LANGSUNG DIPAKAI di Form), domain-modeling, prototype, research, writing-shape, wizard + peta ke FASE 2/3/5.
+- [x] Canvas: n8n pakai **Vue Flow** (xyflow) → kita pakai **Svelte Flow** (@xyflow/svelte): node custom drag-drop, tambah/hapus/hubung node, minimap+controls, prefill grill, simpan localStorage, SSR-safe (browser guard).
+- [x] Skill penajam PRD 40-42: prd-schema (awesome-copilot), pm-copilot (slgoodrich), prd-quality-gate (AgentX). Index: 43 file, 254 chunk, retrieval teruji.
+- [x] Redesign anti-slop: sistem "Meja Arsitek" (Fraunces+Inter+Plex Mono, paper+tinta+hijau, kartu spesimen PRD, stepper 01-04, nol emoji). Landing, login, dashboard, grill, wayfinder, form, canvas ditulis ulang.
+- [x] Verifikasi: check 0, build OK, 7/7 route 200, OAuth valid, label ABCD hilang dari UI.
+**Status:** ✅ Semua perintah sesi ini selesai. Tunggu user review tampilan + status login.
+**Next:** Login hijau → Fase 1 grill AI asli (OpenRouter key).
+
 ## 2026-09-13 — Sesi 08: Login+demo mati → server production + rollback Sesi 07
 **Dikerjakan:**
 - [x] User lapor login Google DAN demo mati. Audit: kode login benar, tak ada kebocoran modul server → build production BERSIH (tak ada error tersembunyi).

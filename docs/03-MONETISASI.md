@@ -13,7 +13,7 @@
 | Harga | Rp0 | **Rp49rb/bln** (atau Rp490rb/thn) | **Rp199rb/bln** (5 seat) |
 | Proyek aktif | 1 | ♾️ Unlimited | ♾️ + shared workspace |
 | Grill chat | 100 pesan/bln | ♾️ Unlimited | ♾️ + model prioritas |
-| Form ABCD | ✅ | ✅ + versioning | ✅ + komentar |
+| Form | ✅ | ✅ + versioning | ✅ + komentar |
 | Wayfinder | max 10 tiket | ♾️ + AFK research | ♾️ + assign member |
 | Canvas | max 25 node | ♾️ + auto-layout + validasi | ♾️ + realtime collab |
 | Export | Markdown (+watermark) | MD/PDF/DOCX/PPTX tanpa watermark | + API export |

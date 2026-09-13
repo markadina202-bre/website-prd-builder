@@ -19,7 +19,7 @@
 - [ ] E2E: ide → 15 pertanyaan → CONTEXT.md solid (`webapp-testing`, `agent-browser`)
 - **Exit criteria:** 5 beta tester menghasilkan CONTEXT.md tanpa bingung.
 
-## Fase 2 — Form ABCD (Minggu 4)
+## Fase 2 — Form (Minggu 4)
 - [ ] Modul `questionnaire` (to-questionnaire): generate field + confidence
 - [ ] UI form 4 blok + mini-grill per field + validasi kontradiksi (`diagnosing-bugs`)
 - [ ] Lock/versioning ABCD + diff sederhana

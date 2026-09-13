@@ -30,7 +30,7 @@ export class GrillSession {
 			this.done = true;
 			this.messages.push({
 				role: 'ai',
-				text: '🎉 Decision tree tuntas! CONTEXT.md-mu solid. Lanjut ke Form ABCD — 90% sudah terisi otomatis.'
+				text: 'Decision tree tuntas! Konteksmu solid. Lanjut ke Form — jawabanmu sudah terisi otomatis di sana.'
 			});
 			return;
 		}
@@ -58,7 +58,7 @@ export class GrillSession {
 		this.done = true;
 		this.messages.push({
 			role: 'ai',
-			text: `Siap, kita wrap up di ketajaman ${this.sharpness}%. Kamu bisa lanjut ke ABCD atau grill lagi nanti.`
+			text: `Siap, kita wrap up di ketajaman ${this.sharpness}%. Kamu bisa lanjut ke Form atau tanya jawab lagi nanti.`
 		});
 	}
 

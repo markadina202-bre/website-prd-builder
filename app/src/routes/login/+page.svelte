@@ -20,20 +20,20 @@
 	}
 </script>
 
-<div class="mx-auto mt-10 max-w-md rounded-2xl border border-stone-200 bg-white p-8 text-center shadow-sm">
-	<div class="text-4xl">🧭</div>
-	<h1 class="mt-2 text-2xl font-black">Masuk ke PRD Builder</h1>
-	<p class="mt-1 text-sm text-stone-500">1-klik dengan akun Gmail-mu. Tanpa password.</p>
+<div class="mx-auto mt-10 max-w-md rounded-2xl border border-ink-900/15 bg-white p-8 text-center shadow-[8px_8px_0_0_#141817]">
+	<p class="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">Masuk</p>
+	<h1 class="mt-2 font-display text-3xl font-bold tracking-tight">Lanjut garap idemu.</h1>
+	<p class="mt-1.5 text-sm text-ink-500">1-klik dengan akun Gmail-mu. Tanpa password.</p>
 	<button
 		onclick={loginGoogle}
-		class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 font-bold shadow-sm hover:bg-stone-50"
+		class="mt-6 flex w-full items-center justify-center gap-2.5 rounded-xl border border-ink-900/15 bg-white px-4 py-3 font-bold transition hover:border-ink-950 active:scale-[.99]"
 	>
-		<span class="grid h-5 w-5 place-items-center rounded-full bg-white font-black text-emerald-600 ring-1 ring-stone-200">G</span>
+		<span class="grid h-6 w-6 place-items-center rounded-md bg-ink-950 font-mono text-sm font-semibold text-paper">G</span>
 		Masuk dengan Google
 	</button>
-	{#if error}<p class="mt-3 text-xs text-red-600">{error}</p>{/if}
-	<button onclick={loginMock} class="mt-3 text-xs text-stone-400 underline hover:text-stone-600">
+	{#if error}<p class="mt-3 text-xs font-semibold text-signal-600">{error}</p>{/if}
+	<button onclick={loginMock} class="mt-4 font-mono text-xs uppercase tracking-widest text-ink-500 underline underline-offset-4 transition hover:text-ink-950">
 		coba demo tanpa login
 	</button>
-	<p class="mt-4 text-[11px] text-stone-400">Masuk aman dengan akun Google — tanpa password.</p>
+	<p class="mt-5 border-t border-dashed border-ink-900/15 pt-4 text-[11px] text-ink-500">Masuk aman dengan akun Google — tanpa password.</p>
 </div>

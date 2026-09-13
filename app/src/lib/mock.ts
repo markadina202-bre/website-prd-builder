@@ -82,24 +82,161 @@ export interface Project {
 
 export const MOCK_PROJECTS: Project[] = [
 	{ id: 'toko-online', title: 'Kasir Toko Kelontong', stage: 'Grill', sharpness: 34, updatedAt: '2 jam lalu' },
-	{ id: 'absensi', title: 'Absensi Karyawan QR', stage: 'ABCD', sharpness: 100, updatedAt: 'kemarin' }
+	{ id: 'absensi', title: 'Absensi Karyawan QR', stage: 'Form', sharpness: 100, updatedAt: 'kemarin' }
 ];
 
-export const ABCD_DEFAULT = {
-	A: { title: 'A — Audience', fields: { 'Persona utama': '', Peran: '', 'User journey singkat': '' } },
-	B: {
-		title: 'B — Business & Problem',
-		fields: { 'Masalah': '', 'Tujuan bisnis': '', 'KPI sukses': '', 'Out-of-scope': '' }
+export interface FormQuestion {
+	id: string;
+	text: string;
+	why: string; // kenapa ditanya (pola kuesioner: cegah jawaban asal)
+	options: [string, string, string]; // opsi a/b/c; d = tulis sendiri
+	prefillKey?: string; // kunci baris CONTEXT.md dari grill
+	answerKey: string; // label jawaban di ringkasan
+}
+
+export interface FormSection {
+	code: string;
+	title: string;
+	desc: string;
+	questions: FormQuestion[];
+}
+
+// Struktur ABCD (Audience/Business/Capabilities/Details) disajikan sebagai kuesioner.
+export const FORM_SECTIONS: FormSection[] = [
+	{
+		code: 'A',
+		title: 'Audience',
+		desc: 'Siapa yang kamu bela.',
+		questions: [
+			{
+				id: 'A1',
+				text: 'Siapa SATU pengguna utama aplikasimu?',
+				why: 'Semua keputusan fitur dinilai dari kacamatanya.',
+				options: ['Pemilik / pengelola usaha', 'Karyawan / staf operasional', 'Pelanggan / pembeli'],
+				prefillKey: 'Pengguna utama',
+				answerKey: 'Persona utama'
+			},
+			{
+				id: 'A2',
+				text: 'Seberapa melek-teknologi dia?',
+				why: 'Menentukan seberapa sederhana UI harus dibuat.',
+				options: ['Gaptek — harus super sederhana', 'Bisa HP untuk sehari-hari', 'Terbiasa aplikasi bisnis'],
+				answerKey: 'Melek teknologi'
+			},
+			{
+				id: 'A3',
+				text: 'Aksi PERTAMA yang dia lakukan saat membuka aplikasi?',
+				why: 'Layar pembuka harus melayani aksi ini.',
+				options: ['Melihat ringkasan / laporan', 'Mencatat / input sesuatu', 'Mencari sesuatu'],
+				answerKey: 'Aksi pertama'
+			}
+		]
 	},
-	C: {
-		title: 'C — Capabilities',
-		fields: { 'Fitur Must-have': '', 'Fitur Should-have': '', 'User story kunci': '' }
+	{
+		code: 'B',
+		title: 'Business & Problem',
+		desc: 'Sakitnya di mana, sembuhnya diukur apa.',
+		questions: [
+			{
+				id: 'B1',
+				text: 'Masalah termahal yang dia hadapi hari ini?',
+				why: 'PRD yang bagus berangkat dari satu luka utama.',
+				options: ['Kerja manual makan waktu', 'Data berantakan / hilang', 'Kehilangan pelanggan / uang'],
+				prefillKey: 'Solusi hari ini & pain',
+				answerKey: 'Masalah utama'
+			},
+			{
+				id: 'B2',
+				text: 'Bagaimana aplikasi ini menghasilkan (atau menghemat) uang?',
+				why: 'Model bisnis mengunci scope fitur pembayaran.',
+				options: ['Langganan bulanan', 'Sekali bayar', 'Gratis — hemat biaya operasional'],
+				answerKey: 'Model bisnis'
+			},
+			{
+				id: 'B3',
+				text: 'Angka sukses 3 bulan setelah launching?',
+				why: 'Tanpa angka, “berhasil” cuma perasaan.',
+				options: ['Jumlah pengguna aktif', 'Waktu / uang yang dihemat', 'Transaksi / pendapatan'],
+				prefillKey: 'Definisi sukses',
+				answerKey: 'KPI sukses'
+			},
+			{
+				id: 'B4',
+				text: 'Satu hal yang TIDAK BOLEH dikerjakan aplikasi ini?',
+				why: 'Anti-fitur mencegah scope creep.',
+				options: ['Jangan sentuh pembayaran', 'Jangan multi-cabang', 'Jangan bikin aplikasi mobile'],
+				prefillKey: 'Out-of-scope',
+				answerKey: 'Out-of-scope'
+			}
+		]
 	},
-	D: {
-		title: 'D — Details & Constraints',
-		fields: { Platform: '', Timeline: '', Budget: '', 'Acceptance criteria': '' }
+	{
+		code: 'C',
+		title: 'Capabilities',
+		desc: 'Bisa apa — dan belum bisa apa.',
+		questions: [
+			{
+				id: 'C1',
+				text: 'SATU fitur wajib di hari peluncuran?',
+				why: 'Vertical slice pertama = tulang punggung PRD.',
+				options: ['Pencatatan / CRUD inti', 'Laporan & rekap otomatis', 'Notifikasi / pengingat'],
+				prefillKey: 'Fitur hari-pertama',
+				answerKey: 'Fitur must-have'
+			},
+			{
+				id: 'C2',
+				text: 'Fitur penting untuk rilis KEDUA?',
+				why: 'Should-have dijadwalkan, bukan dilupakan.',
+				options: ['Export / print laporan', 'Multi-user & peran', 'Integrasi pembayaran'],
+				answerKey: 'Fitur should-have'
+			},
+			{
+				id: 'C3',
+				text: 'Kalau user minta tolong dalam 1 kalimat, bunyinya?',
+				why: 'User story kunci = kompas seluruh tim.',
+				options: ['“Catatkan X dalam < 1 menit”', '“Rekapkan Y otomatis”', '“Ingatkan saya Z tepat waktu”'],
+				answerKey: 'User story kunci'
+			}
+		]
+	},
+	{
+		code: 'D',
+		title: 'Details & Constraints',
+		desc: 'Batasan jujur = PRD realistis.',
+		questions: [
+			{
+				id: 'D1',
+				text: 'Aplikasi berjalan di mana?',
+				why: 'Platform mengunci separuh keputusan teknis.',
+				options: ['Web saja', 'Android saja', 'Web + Android'],
+				prefillKey: 'Platform',
+				answerKey: 'Platform'
+			},
+			{
+				id: 'D2',
+				text: 'Kapan harus bisa dipakai?',
+				why: 'Timeline memaksa prioritas yang jujur.',
+				options: ['< 1 bulan (MVP kilat)', '1–3 bulan', 'Santai (> 3 bulan)'],
+				prefillKey: 'Batasan',
+				answerKey: 'Timeline'
+			},
+			{
+				id: 'D3',
+				text: 'Budget bulanan untuk tool / server?',
+				why: 'Budget memilihkan tumpukan teknologi.',
+				options: ['Rp0 — gratisan saja', '< Rp1 juta', 'Fleksibel'],
+				answerKey: 'Budget'
+			},
+			{
+				id: 'D4',
+				text: 'Kapan boleh dibilang “selesai”?',
+				why: 'Kriteria selesai = kontrak dengan developer.',
+				options: ['Semua tombol berfungsi, tanpa error', 'Dipakai user asli 1 minggu', 'Lolos cek keamanan dasar'],
+				answerKey: 'Acceptance criteria'
+			}
+		]
 	}
-};
+];
 
 export interface Ticket {
 	id: string;

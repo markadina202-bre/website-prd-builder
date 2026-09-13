@@ -23,6 +23,10 @@
 - M-027: Login Google TIDAK BISA di dalam iframe preview (Google tolak framing → putih polos). User WAJIB buka preview di tab baru untuk OAuth. localStorage WAJIB try/catch (SecurityError di iframe/private mode bisa crash app).
 - M-028: Preview user HARUS mode production (adapter-node + `vite preview`, PORT 5173, env via source .env) — dev/HMR rapuh untuk user (cache acak, ratusan modul). adapter-auto TIDAK bisa build di sandbox ("could not detect environment") → pakai adapter-node.
 - M-029: Ringkasan sesi BISA tidak cocok dengan workspace (Sesi 07 hilang total tanpa jejak — commit lenyap). Setiap awal sesi: verifikasi `git log` + file kunci SEBELUM percaya ringkasan.
+- M-030: Nama produk "Form ABCD" → "Form" (struktur ABCD tetap internal). Route `/abcd` → `/form` (bookmark lama 404, beta = OK). Tabel DB `abcd` TIDAK diganti (hindari migrasi sia-sia).
+- M-031: n8n canvas = Vue Flow (xyflow). SvelteKit = @xyflow/svelte: `bind:nodes/bind:edges`, node custom via `nodeTypes`, WAJIB browser-guard (SSR crash), simpan state manual.
+- M-032: `as` cast TIDAK boleh di `{#each}` Svelte (parse error) → data bertipe di `<script>`. `{@const}` hanya anak langsung block — di dalam div biasa = error.
+- M-033: raw.githubusercontent.com DIBLOKIR sandbox; ambil file GitHub via api.github.com (contents → base64).
 
 ## Bisnis
 - M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat). [CONFIRMED user 2026-09-13]
