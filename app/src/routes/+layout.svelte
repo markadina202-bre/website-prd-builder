@@ -4,7 +4,7 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { session, mockLogout, restoreSession } from '$lib/session.svelte';
+	import { session, mockLogout, restoreSession, hasMockSession } from '$lib/session.svelte';
 	import { useSession, signOut } from '$lib/auth-client';
 
 	const realSession = useSession();
@@ -19,7 +19,7 @@
 		!PUBLIC.includes($page.url.pathname) &&
 		!$realSession?.isPending &&
 		!email &&
-		!localStorage.getItem('pb_mock_session')
+		!hasMockSession()
 	) {
 		goto('/login');
 	}

@@ -9,5 +9,9 @@ export default defineConfig({
 		port: 5173,
 		// Dev-only: izinkan domain preview sandbox (prod pakai adapter-node, tak terpengaruh)
 		allowedHosts: ['.e2b.app']
+	},
+	preview: {
+		host: '0.0.0.0',
+		port: 5173
 	}
 });

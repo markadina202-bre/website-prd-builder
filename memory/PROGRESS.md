@@ -2,6 +2,21 @@
 
 > Update SETIAP sesi kerja. Format: tanggal, fase, yang dikerjakan, status, next.
 
+## 2026-09-13 — Sesi 08: Login+demo mati → server production + rollback Sesi 07
+**Dikerjakan:**
+- [x] User lapor login Google DAN demo mati. Audit: kode login benar, tak ada kebocoran modul server → build production BERSIH (tak ada error tersembunyi).
+- [x] INSIDEN: Sesi 07 (hardening localStorage + M-027 + commit e3c4c76) HILANG TOTAL — workspace rollback ke Sesi 06. Diterapkan ulang di sesi ini + diverifikasi via git log.
+- [x] Switch preview ke PRODUCTION: adapter-auto → adapter-node, `vite preview` port 5173 (URL preview TETAP), env via source .env. Alasan: bundel tunggal, tanpa HMR, anti-cache-acak.
+- [x] Verifikasi prod: 4/4 route 200, OAuth URL valid, get-session null ✅.
+**Status:** ⏳ Tunggu user: buka ulang preview (hard-refresh) → coba demo + Google → lapor persis yang terjadi.
+**Next:** Login hijau → Fase 1 (OpenRouter key).
+
+## 2026-09-13 — Sesi 07 (diterapkan ulang di Sesi 08): Hardening storage iframe-safe
+**Dikerjakan:**
+- [x] Diagnosis halaman putih: halaman Google ditolak tampil di iframe (X-Frame-Options DENY) → user wajib buka preview di tab baru.
+- [x] Hardening: localStorage try/catch (session.svelte.ts + guard layout pakai hasMockSession()).
+**Status:** ✅ Diterapkan ulang + masuk build production.
+
 ## 2026-09-13 — Sesi 06: Login error + de-brand + 8 skill desain + konsep v2
 **Dikerjakan:**
 - [x] Login error: log server BERSIH pasca-fix (tak ada error baru) → error user hampir pasti di sisi Google (redirect_uri_mismatch / consent). Menunggu info persis error dari user.
