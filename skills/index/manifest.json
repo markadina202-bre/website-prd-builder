@@ -1,0 +1,1156 @@
+{
+ "files": {
+  "skills/cache.kv": "38a2f16a996d",
+  "skills/agent-browser/SKILL.md": "1828b15044fe",
+  "skills/brainstorming/SKILL.md": "3be3a8778c63",
+  "skills/codebasememory/SKILL.md": "c3126ecc2fe3",
+  "skills/docx/SKILL.md": "06e765857e5b",
+  "skills/excalidraw-diagram/SKILL.md": "4d777dd8fd44",
+  "skills/frontend-design/SKILL.md": "201c93d19adb",
+  "skills/get-shit-done/SKILL.md": "878614281061",
+  "skills/mattpocock/SKILL.md": "770dacc3faf6",
+  "skills/mcp-builder/SKILL.md": "3c2de4b51b14",
+  "skills/n8n-skills/SKILL.md": "c6892e395721",
+  "skills/pdf/SKILL.md": "d0d75c6cb140",
+  "skills/pptx/SKILL.md": "4211d173c376",
+  "skills/skill-creator/SKILL.md": "4aecfa3674b0",
+  "skills/subagent-driven-development/SKILL.md": "25c7c14942ea",
+  "skills/supabase-postgres-best-practices/SKILL.md": "4b7d7dd74333",
+  "skills/superhuman/SKILL.md": "a46fcf2ed937",
+  "skills/systematic-debugging/SKILL.md": "800dccd484e2",
+  "skills/test-driven-development/SKILL.md": "bd1e0c39558f",
+  "skills/vercel-react-best-practices/SKILL.md": "2b3403e1759f",
+  "skills/verification-before-completion/SKILL.md": "85d6016a45d8",
+  "skills/webapp-testing/SKILL.md": "2902075510c1",
+  "skills/webhook-skills/SKILL.md": "4a7b9d0d4562",
+  "skills/writing-plans/SKILL.md": "881f9e0a487b"
+ },
+ "chunks": [
+  {
+   "id": "frontend-design#kv",
+   "skill": "frontend-design",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 71,
+   "hash": "9dbfb1cc240d"
+  },
+  {
+   "id": "webapp-testing#kv",
+   "skill": "webapp-testing",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 59,
+   "hash": "d4adec578088"
+  },
+  {
+   "id": "skill-creator#kv",
+   "skill": "skill-creator",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 60,
+   "hash": "c161bf7e2b67"
+  },
+  {
+   "id": "mcp-builder#kv",
+   "skill": "mcp-builder",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 58,
+   "hash": "f2decdc99edb"
+  },
+  {
+   "id": "pdf#kv",
+   "skill": "pdf",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 56,
+   "hash": "495d33708253"
+  },
+  {
+   "id": "docx#kv",
+   "skill": "docx",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 46,
+   "hash": "75200c3357a3"
+  },
+  {
+   "id": "pptx#kv",
+   "skill": "pptx",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 51,
+   "hash": "5bd7f30bacd6"
+  },
+  {
+   "id": "brainstorming#kv",
+   "skill": "brainstorming",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 65,
+   "hash": "7a3e3662cd3e"
+  },
+  {
+   "id": "systematic-debugging#kv",
+   "skill": "systematic-debugging",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 64,
+   "hash": "e5f6331a907e"
+  },
+  {
+   "id": "test-driven-development#kv",
+   "skill": "test-driven-development",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 61,
+   "hash": "84e9ec6e698e"
+  },
+  {
+   "id": "writing-plans#kv",
+   "skill": "writing-plans",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 60,
+   "hash": "47bad33d1298"
+  },
+  {
+   "id": "subagent-driven-development#kv",
+   "skill": "subagent-driven-development",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 60,
+   "hash": "68be6aa6d186"
+  },
+  {
+   "id": "verification-before-completion#kv",
+   "skill": "verification-before-completion",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 61,
+   "hash": "402bdf3e92f7"
+  },
+  {
+   "id": "excalidraw-diagram#kv",
+   "skill": "excalidraw-diagram",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 51,
+   "hash": "399ec2de46ba"
+  },
+  {
+   "id": "n8n-skills#kv",
+   "skill": "n8n-skills",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 52,
+   "hash": "22f51e9f3f4b"
+  },
+  {
+   "id": "webhook-skills#kv",
+   "skill": "webhook-skills",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 45,
+   "hash": "682b1fa2b366"
+  },
+  {
+   "id": "supabase-postgres-best-practices#kv",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 46,
+   "hash": "b7abfe4637c3"
+  },
+  {
+   "id": "vercel-react-best-practices#kv",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 54,
+   "hash": "b43cd519984a"
+  },
+  {
+   "id": "get-shit-done#kv",
+   "skill": "get-shit-done",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 43,
+   "hash": "ac081fb75245"
+  },
+  {
+   "id": "agent-browser#kv",
+   "skill": "agent-browser",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 39,
+   "hash": "bb4ec9bbe1a6"
+  },
+  {
+   "id": "mattpocock#kv",
+   "skill": "mattpocock",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 72,
+   "hash": "33c7a6b055dd"
+  },
+  {
+   "id": "superhuman#kv",
+   "skill": "superhuman",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 80,
+   "hash": "47369e7f41bc"
+  },
+  {
+   "id": "codebasememory#kv",
+   "skill": "codebasememory",
+   "file": "skills/cache.kv",
+   "section": "registry",
+   "tokens": 67,
+   "hash": "ab72ce98899e"
+  },
+  {
+   "id": "agent-browser#00",
+   "skill": "agent-browser",
+   "file": "skills/agent-browser/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 34,
+   "hash": "f5c83e6fe185"
+  },
+  {
+   "id": "agent-browser#01",
+   "skill": "agent-browser",
+   "file": "skills/agent-browser/SKILL.md",
+   "section": "Trigger",
+   "tokens": 14,
+   "hash": "1c6d76a8e5d7"
+  },
+  {
+   "id": "agent-browser#02",
+   "skill": "agent-browser",
+   "file": "skills/agent-browser/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 57,
+   "hash": "66a267f97764"
+  },
+  {
+   "id": "agent-browser#03",
+   "skill": "agent-browser",
+   "file": "skills/agent-browser/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 17,
+   "hash": "0c8000c90d52"
+  },
+  {
+   "id": "agent-browser#04",
+   "skill": "agent-browser",
+   "file": "skills/agent-browser/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 7,
+   "hash": "044a452f7505"
+  },
+  {
+   "id": "brainstorming#00",
+   "skill": "brainstorming",
+   "file": "skills/brainstorming/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 41,
+   "hash": "12096c3ccb0a"
+  },
+  {
+   "id": "brainstorming#01",
+   "skill": "brainstorming",
+   "file": "skills/brainstorming/SKILL.md",
+   "section": "Trigger",
+   "tokens": 16,
+   "hash": "03d381681c87"
+  },
+  {
+   "id": "brainstorming#02",
+   "skill": "brainstorming",
+   "file": "skills/brainstorming/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 52,
+   "hash": "d88f9919acb6"
+  },
+  {
+   "id": "brainstorming#03",
+   "skill": "brainstorming",
+   "file": "skills/brainstorming/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 30,
+   "hash": "1d847ccf9a27"
+  },
+  {
+   "id": "brainstorming#04",
+   "skill": "brainstorming",
+   "file": "skills/brainstorming/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 7,
+   "hash": "423ed326da72"
+  },
+  {
+   "id": "codebasememory#00",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 39,
+   "hash": "83c050d81435"
+  },
+  {
+   "id": "codebasememory#01",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "Trigger",
+   "tokens": 20,
+   "hash": "48d8af3d28af"
+  },
+  {
+   "id": "codebasememory#02",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "Lapisan memori (3 lapis, local-first)",
+   "tokens": 60,
+   "hash": "8b2a8b708d6f"
+  },
+  {
+   "id": "codebasememory#03",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "Protokol wajib agen",
+   "tokens": 68,
+   "hash": "c4e8ba903857"
+  },
+  {
+   "id": "codebasememory#04",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "Upgrade path (opsional, saat skala butuh)",
+   "tokens": 37,
+   "hash": "92470f8be0c9"
+  },
+  {
+   "id": "codebasememory#05",
+   "skill": "codebasememory",
+   "file": "skills/codebasememory/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 16,
+   "hash": "70416716a8d8"
+  },
+  {
+   "id": "docx#00",
+   "skill": "docx",
+   "file": "skills/docx/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 39,
+   "hash": "8af1429c3c0f"
+  },
+  {
+   "id": "docx#01",
+   "skill": "docx",
+   "file": "skills/docx/SKILL.md",
+   "section": "Trigger",
+   "tokens": 10,
+   "hash": "c78a9dea3c29"
+  },
+  {
+   "id": "docx#02",
+   "skill": "docx",
+   "file": "skills/docx/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 38,
+   "hash": "6db19bab4505"
+  },
+  {
+   "id": "docx#03",
+   "skill": "docx",
+   "file": "skills/docx/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 16,
+   "hash": "ea596e0cb98c"
+  },
+  {
+   "id": "docx#04",
+   "skill": "docx",
+   "file": "skills/docx/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "b7c88f0ea210"
+  },
+  {
+   "id": "excalidraw-diagram#00",
+   "skill": "excalidraw-diagram",
+   "file": "skills/excalidraw-diagram/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 44,
+   "hash": "69352b26bfb5"
+  },
+  {
+   "id": "excalidraw-diagram#01",
+   "skill": "excalidraw-diagram",
+   "file": "skills/excalidraw-diagram/SKILL.md",
+   "section": "Trigger",
+   "tokens": 9,
+   "hash": "926b75ded5d1"
+  },
+  {
+   "id": "excalidraw-diagram#02",
+   "skill": "excalidraw-diagram",
+   "file": "skills/excalidraw-diagram/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 38,
+   "hash": "ce0aa6e1753c"
+  },
+  {
+   "id": "excalidraw-diagram#03",
+   "skill": "excalidraw-diagram",
+   "file": "skills/excalidraw-diagram/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 18,
+   "hash": "c3b25476bcc9"
+  },
+  {
+   "id": "excalidraw-diagram#04",
+   "skill": "excalidraw-diagram",
+   "file": "skills/excalidraw-diagram/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 5,
+   "hash": "117801dc7ab6"
+  },
+  {
+   "id": "frontend-design#00",
+   "skill": "frontend-design",
+   "file": "skills/frontend-design/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 46,
+   "hash": "8a0484eb94a0"
+  },
+  {
+   "id": "frontend-design#01",
+   "skill": "frontend-design",
+   "file": "skills/frontend-design/SKILL.md",
+   "section": "Trigger",
+   "tokens": 20,
+   "hash": "f75cf11af89d"
+  },
+  {
+   "id": "frontend-design#02",
+   "skill": "frontend-design",
+   "file": "skills/frontend-design/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 59,
+   "hash": "593747dc15b8"
+  },
+  {
+   "id": "frontend-design#03",
+   "skill": "frontend-design",
+   "file": "skills/frontend-design/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 20,
+   "hash": "c856d949d492"
+  },
+  {
+   "id": "frontend-design#04",
+   "skill": "frontend-design",
+   "file": "skills/frontend-design/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 5,
+   "hash": "c9d3961ae7c8"
+  },
+  {
+   "id": "get-shit-done#00",
+   "skill": "get-shit-done",
+   "file": "skills/get-shit-done/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 35,
+   "hash": "f1973a555b7d"
+  },
+  {
+   "id": "get-shit-done#01",
+   "skill": "get-shit-done",
+   "file": "skills/get-shit-done/SKILL.md",
+   "section": "Trigger",
+   "tokens": 9,
+   "hash": "5358027cd5f9"
+  },
+  {
+   "id": "get-shit-done#02",
+   "skill": "get-shit-done",
+   "file": "skills/get-shit-done/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 61,
+   "hash": "6887ae1d4dc0"
+  },
+  {
+   "id": "get-shit-done#03",
+   "skill": "get-shit-done",
+   "file": "skills/get-shit-done/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 22,
+   "hash": "3afb53287c04"
+  },
+  {
+   "id": "get-shit-done#04",
+   "skill": "get-shit-done",
+   "file": "skills/get-shit-done/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "5bb8d8a0a815"
+  },
+  {
+   "id": "mattpocock#00",
+   "skill": "mattpocock",
+   "file": "skills/mattpocock/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 76,
+   "hash": "87775c539201"
+  },
+  {
+   "id": "mattpocock#01",
+   "skill": "mattpocock",
+   "file": "skills/mattpocock/SKILL.md",
+   "section": "Katalog 35 skill (kode: peran 1-baris)",
+   "tokens": 216,
+   "hash": "8f2738bc6c5f"
+  },
+  {
+   "id": "mattpocock#02",
+   "skill": "mattpocock",
+   "file": "skills/mattpocock/SKILL.md",
+   "section": "Peta ke produk (SkillRunner) — RINGKASAN EKSEKUTIF",
+   "tokens": 63,
+   "hash": "6574fe924c48"
+  },
+  {
+   "id": "mattpocock#03",
+   "skill": "mattpocock",
+   "file": "skills/mattpocock/SKILL.md",
+   "section": "Aturan keras warisan repo ini",
+   "tokens": 59,
+   "hash": "d25a9b95a633"
+  },
+  {
+   "id": "mattpocock#04",
+   "skill": "mattpocock",
+   "file": "skills/mattpocock/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 10,
+   "hash": "7749d43d8cc5"
+  },
+  {
+   "id": "mcp-builder#00",
+   "skill": "mcp-builder",
+   "file": "skills/mcp-builder/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 43,
+   "hash": "c1c93084f65a"
+  },
+  {
+   "id": "mcp-builder#01",
+   "skill": "mcp-builder",
+   "file": "skills/mcp-builder/SKILL.md",
+   "section": "Trigger",
+   "tokens": 20,
+   "hash": "eff8d20faba6"
+  },
+  {
+   "id": "mcp-builder#02",
+   "skill": "mcp-builder",
+   "file": "skills/mcp-builder/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 48,
+   "hash": "5bd64780928b"
+  },
+  {
+   "id": "mcp-builder#03",
+   "skill": "mcp-builder",
+   "file": "skills/mcp-builder/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 25,
+   "hash": "716aabbb0f8f"
+  },
+  {
+   "id": "mcp-builder#04",
+   "skill": "mcp-builder",
+   "file": "skills/mcp-builder/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "2d4373defc9a"
+  },
+  {
+   "id": "n8n-skills#00",
+   "skill": "n8n-skills",
+   "file": "skills/n8n-skills/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 36,
+   "hash": "1da2299bea45"
+  },
+  {
+   "id": "n8n-skills#01",
+   "skill": "n8n-skills",
+   "file": "skills/n8n-skills/SKILL.md",
+   "section": "Trigger",
+   "tokens": 11,
+   "hash": "405eab72d6d0"
+  },
+  {
+   "id": "n8n-skills#02",
+   "skill": "n8n-skills",
+   "file": "skills/n8n-skills/SKILL.md",
+   "section": "Prinsip inti (yang diadopsi)",
+   "tokens": 49,
+   "hash": "d98777d801c5"
+  },
+  {
+   "id": "n8n-skills#03",
+   "skill": "n8n-skills",
+   "file": "skills/n8n-skills/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 22,
+   "hash": "69952a34ea94"
+  },
+  {
+   "id": "n8n-skills#04",
+   "skill": "n8n-skills",
+   "file": "skills/n8n-skills/SKILL.md",
+   "section": "Batasan",
+   "tokens": 10,
+   "hash": "0f8dea7c9bcf"
+  },
+  {
+   "id": "pdf#00",
+   "skill": "pdf",
+   "file": "skills/pdf/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 42,
+   "hash": "bea59816060b"
+  },
+  {
+   "id": "pdf#01",
+   "skill": "pdf",
+   "file": "skills/pdf/SKILL.md",
+   "section": "Trigger",
+   "tokens": 18,
+   "hash": "b78e97732452"
+  },
+  {
+   "id": "pdf#02",
+   "skill": "pdf",
+   "file": "skills/pdf/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 48,
+   "hash": "e74e055bf7f1"
+  },
+  {
+   "id": "pdf#03",
+   "skill": "pdf",
+   "file": "skills/pdf/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 26,
+   "hash": "8e97acbdcd22"
+  },
+  {
+   "id": "pdf#04",
+   "skill": "pdf",
+   "file": "skills/pdf/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "a68eaab92dd5"
+  },
+  {
+   "id": "pptx#00",
+   "skill": "pptx",
+   "file": "skills/pptx/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 40,
+   "hash": "1a304b34d2a2"
+  },
+  {
+   "id": "pptx#01",
+   "skill": "pptx",
+   "file": "skills/pptx/SKILL.md",
+   "section": "Trigger",
+   "tokens": 8,
+   "hash": "65afb6957afe"
+  },
+  {
+   "id": "pptx#02",
+   "skill": "pptx",
+   "file": "skills/pptx/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 44,
+   "hash": "e61be908b8eb"
+  },
+  {
+   "id": "pptx#03",
+   "skill": "pptx",
+   "file": "skills/pptx/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 16,
+   "hash": "5571f2a09c49"
+  },
+  {
+   "id": "pptx#04",
+   "skill": "pptx",
+   "file": "skills/pptx/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "55081133c371"
+  },
+  {
+   "id": "skill-creator#00",
+   "skill": "skill-creator",
+   "file": "skills/skill-creator/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 43,
+   "hash": "0376296d5fc2"
+  },
+  {
+   "id": "skill-creator#01",
+   "skill": "skill-creator",
+   "file": "skills/skill-creator/SKILL.md",
+   "section": "Trigger",
+   "tokens": 15,
+   "hash": "917adfc959b7"
+  },
+  {
+   "id": "skill-creator#02",
+   "skill": "skill-creator",
+   "file": "skills/skill-creator/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 58,
+   "hash": "da42e696bf68"
+  },
+  {
+   "id": "skill-creator#03",
+   "skill": "skill-creator",
+   "file": "skills/skill-creator/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 21,
+   "hash": "3f0cfa3bd711"
+  },
+  {
+   "id": "skill-creator#04",
+   "skill": "skill-creator",
+   "file": "skills/skill-creator/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "8131d37437b5"
+  },
+  {
+   "id": "subagent-driven-development#00",
+   "skill": "subagent-driven-development",
+   "file": "skills/subagent-driven-development/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 43,
+   "hash": "db72a93d9494"
+  },
+  {
+   "id": "subagent-driven-development#01",
+   "skill": "subagent-driven-development",
+   "file": "skills/subagent-driven-development/SKILL.md",
+   "section": "Trigger",
+   "tokens": 15,
+   "hash": "3c29143f5736"
+  },
+  {
+   "id": "subagent-driven-development#02",
+   "skill": "subagent-driven-development",
+   "file": "skills/subagent-driven-development/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 52,
+   "hash": "7d4fbda704a6"
+  },
+  {
+   "id": "subagent-driven-development#03",
+   "skill": "subagent-driven-development",
+   "file": "skills/subagent-driven-development/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 19,
+   "hash": "445b990d77b4"
+  },
+  {
+   "id": "subagent-driven-development#04",
+   "skill": "subagent-driven-development",
+   "file": "skills/subagent-driven-development/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 7,
+   "hash": "24770dc6990e"
+  },
+  {
+   "id": "supabase-postgres-best-practices#00",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/supabase-postgres-best-practices/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 40,
+   "hash": "e28c134a4bec"
+  },
+  {
+   "id": "supabase-postgres-best-practices#01",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/supabase-postgres-best-practices/SKILL.md",
+   "section": "Trigger",
+   "tokens": 9,
+   "hash": "061cdedbec27"
+  },
+  {
+   "id": "supabase-postgres-best-practices#02",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/supabase-postgres-best-practices/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 62,
+   "hash": "00a5952ad06b"
+  },
+  {
+   "id": "supabase-postgres-best-practices#03",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/supabase-postgres-best-practices/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 25,
+   "hash": "dd6b79a03d1e"
+  },
+  {
+   "id": "supabase-postgres-best-practices#04",
+   "skill": "supabase-postgres-best-practices",
+   "file": "skills/supabase-postgres-best-practices/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 5,
+   "hash": "e0c8580a7b9f"
+  },
+  {
+   "id": "superhuman#00",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 60,
+   "hash": "f74798c573fb"
+  },
+  {
+   "id": "superhuman#01",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "Isi framework (14+ skill)",
+   "tokens": 47,
+   "hash": "9c4f407a0a49"
+  },
+  {
+   "id": "superhuman#02",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "Filosofi (4 pilar — hafalkan)",
+   "tokens": 26,
+   "hash": "aaf605aec60e"
+  },
+  {
+   "id": "superhuman#03",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "Alur baku development (7 langkah)",
+   "tokens": 27,
+   "hash": "0cb061a4e001"
+  },
+  {
+   "id": "superhuman#04",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 26,
+   "hash": "48298d091b53"
+  },
+  {
+   "id": "superhuman#05",
+   "skill": "superhuman",
+   "file": "skills/superhuman/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 9,
+   "hash": "8cae49cfac6b"
+  },
+  {
+   "id": "systematic-debugging#00",
+   "skill": "systematic-debugging",
+   "file": "skills/systematic-debugging/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 42,
+   "hash": "b291e4a15906"
+  },
+  {
+   "id": "systematic-debugging#01",
+   "skill": "systematic-debugging",
+   "file": "skills/systematic-debugging/SKILL.md",
+   "section": "Trigger",
+   "tokens": 9,
+   "hash": "bbb67118b66b"
+  },
+  {
+   "id": "systematic-debugging#02",
+   "skill": "systematic-debugging",
+   "file": "skills/systematic-debugging/SKILL.md",
+   "section": "Prinsip inti (4 fase)",
+   "tokens": 62,
+   "hash": "fb39a117e6e6"
+  },
+  {
+   "id": "systematic-debugging#03",
+   "skill": "systematic-debugging",
+   "file": "skills/systematic-debugging/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 22,
+   "hash": "47b277c34548"
+  },
+  {
+   "id": "systematic-debugging#04",
+   "skill": "systematic-debugging",
+   "file": "skills/systematic-debugging/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 8,
+   "hash": "382c2ab73129"
+  },
+  {
+   "id": "test-driven-development#00",
+   "skill": "test-driven-development",
+   "file": "skills/test-driven-development/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 41,
+   "hash": "b87d780c6149"
+  },
+  {
+   "id": "test-driven-development#01",
+   "skill": "test-driven-development",
+   "file": "skills/test-driven-development/SKILL.md",
+   "section": "Trigger",
+   "tokens": 8,
+   "hash": "2594c4a665f4"
+  },
+  {
+   "id": "test-driven-development#02",
+   "skill": "test-driven-development",
+   "file": "skills/test-driven-development/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 61,
+   "hash": "dd1a58f344ca"
+  },
+  {
+   "id": "test-driven-development#03",
+   "skill": "test-driven-development",
+   "file": "skills/test-driven-development/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 20,
+   "hash": "b84415d1adb8"
+  },
+  {
+   "id": "test-driven-development#04",
+   "skill": "test-driven-development",
+   "file": "skills/test-driven-development/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 9,
+   "hash": "58511c7dc104"
+  },
+  {
+   "id": "vercel-react-best-practices#00",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/vercel-react-best-practices/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 44,
+   "hash": "36865d9dabf9"
+  },
+  {
+   "id": "vercel-react-best-practices#01",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/vercel-react-best-practices/SKILL.md",
+   "section": "Trigger",
+   "tokens": 10,
+   "hash": "3ab2ae49ae08"
+  },
+  {
+   "id": "vercel-react-best-practices#02",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/vercel-react-best-practices/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 56,
+   "hash": "268b74590d9d"
+  },
+  {
+   "id": "vercel-react-best-practices#03",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/vercel-react-best-practices/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 20,
+   "hash": "ab024a453e57"
+  },
+  {
+   "id": "vercel-react-best-practices#04",
+   "skill": "vercel-react-best-practices",
+   "file": "skills/vercel-react-best-practices/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 7,
+   "hash": "7b52774d015f"
+  },
+  {
+   "id": "verification-before-completion#00",
+   "skill": "verification-before-completion",
+   "file": "skills/verification-before-completion/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 42,
+   "hash": "72c56daeb498"
+  },
+  {
+   "id": "verification-before-completion#01",
+   "skill": "verification-before-completion",
+   "file": "skills/verification-before-completion/SKILL.md",
+   "section": "Trigger",
+   "tokens": 8,
+   "hash": "bbc54e155229"
+  },
+  {
+   "id": "verification-before-completion#02",
+   "skill": "verification-before-completion",
+   "file": "skills/verification-before-completion/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 45,
+   "hash": "be3d5286eca9"
+  },
+  {
+   "id": "verification-before-completion#03",
+   "skill": "verification-before-completion",
+   "file": "skills/verification-before-completion/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 17,
+   "hash": "f6bf52e72797"
+  },
+  {
+   "id": "verification-before-completion#04",
+   "skill": "verification-before-completion",
+   "file": "skills/verification-before-completion/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 7,
+   "hash": "72be94005a0e"
+  },
+  {
+   "id": "webapp-testing#00",
+   "skill": "webapp-testing",
+   "file": "skills/webapp-testing/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 44,
+   "hash": "be82603375af"
+  },
+  {
+   "id": "webapp-testing#01",
+   "skill": "webapp-testing",
+   "file": "skills/webapp-testing/SKILL.md",
+   "section": "Trigger",
+   "tokens": 20,
+   "hash": "772ee032f442"
+  },
+  {
+   "id": "webapp-testing#02",
+   "skill": "webapp-testing",
+   "file": "skills/webapp-testing/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 57,
+   "hash": "372b4b9c511a"
+  },
+  {
+   "id": "webapp-testing#03",
+   "skill": "webapp-testing",
+   "file": "skills/webapp-testing/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 16,
+   "hash": "95450091d03a"
+  },
+  {
+   "id": "webapp-testing#04",
+   "skill": "webapp-testing",
+   "file": "skills/webapp-testing/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "eaa68b0118de"
+  },
+  {
+   "id": "webhook-skills#00",
+   "skill": "webhook-skills",
+   "file": "skills/webhook-skills/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 33,
+   "hash": "11d61a81cb11"
+  },
+  {
+   "id": "webhook-skills#01",
+   "skill": "webhook-skills",
+   "file": "skills/webhook-skills/SKILL.md",
+   "section": "Trigger",
+   "tokens": 8,
+   "hash": "3fce2d08cf9d"
+  },
+  {
+   "id": "webhook-skills#02",
+   "skill": "webhook-skills",
+   "file": "skills/webhook-skills/SKILL.md",
+   "section": "Prinsip inti (TIDAK BISA DITAWAR)",
+   "tokens": 73,
+   "hash": "84983b59f614"
+  },
+  {
+   "id": "webhook-skills#03",
+   "skill": "webhook-skills",
+   "file": "skills/webhook-skills/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 27,
+   "hash": "5695cd8bf05c"
+  },
+  {
+   "id": "webhook-skills#04",
+   "skill": "webhook-skills",
+   "file": "skills/webhook-skills/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 6,
+   "hash": "f5b1e3b6983c"
+  },
+  {
+   "id": "writing-plans#00",
+   "skill": "writing-plans",
+   "file": "skills/writing-plans/SKILL.md",
+   "section": "frontmatter",
+   "tokens": 42,
+   "hash": "f1b57b217352"
+  },
+  {
+   "id": "writing-plans#01",
+   "skill": "writing-plans",
+   "file": "skills/writing-plans/SKILL.md",
+   "section": "Trigger",
+   "tokens": 18,
+   "hash": "b0e5f4148d4e"
+  },
+  {
+   "id": "writing-plans#02",
+   "skill": "writing-plans",
+   "file": "skills/writing-plans/SKILL.md",
+   "section": "Prinsip inti",
+   "tokens": 57,
+   "hash": "9bfe53f98657"
+  },
+  {
+   "id": "writing-plans#03",
+   "skill": "writing-plans",
+   "file": "skills/writing-plans/SKILL.md",
+   "section": "Cara pakai di proyek ini",
+   "tokens": 17,
+   "hash": "b0c7d5fa050e"
+  },
+  {
+   "id": "writing-plans#04",
+   "skill": "writing-plans",
+   "file": "skills/writing-plans/SKILL.md",
+   "section": "Referensi penuh",
+   "tokens": 8,
+   "hash": "131b426994b3"
+  }
+ ],
+ "stats": {
+  "files": 24,
+  "chunks": 140,
+  "terms": 1262,
+  "tokens": 4875
+ }
+}
