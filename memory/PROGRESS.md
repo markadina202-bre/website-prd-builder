@@ -23,9 +23,11 @@
 - [x] User paste DATABASE_URL + Google Client ID → tersimpan di app/.env (gitignored, chmod 600). Pelajaran: quote nilai .env (karakter `&` merusak `source`).
 - [x] TEMUAN: sandbox = egress allowlist (bukti: example.com & api.neon:443 RST, github OK). neon-http MUSTAHIL dari sini → pindah ke postgres-js TCP (`prepare:false`, `ssl:require`).
 - [x] Strategi migrasi: `.github/workflows/migrate.yml` (dispatch manual + auto saat app/drizzle/** berubah; butuh repo secret DATABASE_URL). `gh secret set` DITOLAK 403 → user harus isi secret via GitHub UI.
-- [ ] Tunggu: (1) user tambah secret DATABASE_URL di GitHub (atau migrate dari laptop), (2) GOOGLE_CLIENT_SECRET.
-**Status:** ⏳ Kode + CI siap. Tunggu user isi secret → saya trigger migrasi & verifikasi 13 tabel.
-**Next:** Secret terisi → trigger migrate.yml → test login Google end-to-end (butuh CLIENT_SECRET).
+- [x] CI migrate run 34763073557: gagal di "Apply migrations" (17s). Run 34763136601 + guard: gagal di "Check DATABASE_URL secret" → TERBUKTI secret belum diisi user. `gh workflow run` tak bisa dipakai (workflow_dispatch hanya resolve dari default branch) → trigger via push app/drizzle/**.
+- [x] Pelajaran infra: JANGAN paralelkan edit file dengan git add/commit (race: 1 file ketinggalan, commit 51aa913).
+- [ ] Tunggu: (1) user isi secret DATABASE_URL → re-run/trigger → verifikasi 13 tabel, (2) GOOGLE_CLIENT_SECRET.
+**Status:** ⏳ Bola di user: isi 1 secret GitHub. Semua otomasi siap & teruji gagal-dengan-benar.
+**Next:** Secret terisi → trigger → 13 tabel → login Google end-to-end.
 
 ## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
 **Fase:** Pra-Fase 0 (keputusan stack)
