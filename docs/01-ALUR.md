@@ -110,7 +110,7 @@ dengan pesan "Perjalananmu pendek, langsung ke canvas!".
 "tiba-tiba selesai sendiri" (AFK jobs) terasa magis.
 
 ## TAHAP 4 — Canvas ala n8n (arsitektur visual)
-**Tujuan:** PRD jadi graph visual yang bisa dimanipulasi. Built with React Flow.
+**Tujuan:** PRD jadi graph visual yang bisa dimanipulasi. Built with Svelte Flow (@xyflow/svelte).
 
 **Jenis node (palet kiri):**
 | Node | Warna | Isi |

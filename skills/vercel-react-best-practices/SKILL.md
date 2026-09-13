@@ -15,14 +15,17 @@ Bikin/ubah halaman/komponen Next.js, keluhan lambat, bundle membengkak.
   (chat input, form, canvas). Jangan jadikan semua "use client".
 - Streaming + Suspense untuk bagian lambat (AI stream, canvas besar);
   paralelkan fetch independen (anti-waterfall).
-- Bundle: dynamic import untuk yang berat (React Flow, editor), ukur dengan
+- Bundle: dynamic import untuk yang berat (Svelte Flow, editor), ukur dengan
   analyzer; tree-shake ikon/lib.
 - Cache tepat: static untuk landing/pricing; dynamic + revalidate untuk
   dashboard; jangan cache data user antar-user.
 
-## Cara pakai di proyek ini
-Standar: chat/canvas = client islands di atas RSC shell; React Flow via
-dynamic import; AI streaming via route handlers + tRPC subscriptions.
+## Cara pakai di proyek ini (dipetakan ke SvelteKit — ADR-006)
+Standar: data di `load` + Remote Functions (padanan RSC: fetch di server,
+render sekecil mungkin di client); chat/canvas = islands reaktif di atas
+shell server; Svelte Flow via dynamic import; AI streaming via SSE endpoint
++ `@ai-sdk/svelte`. Prinsip inti (paralel fetch, bundle diet, jangan cache
+data user antar-user) tetap berlaku 1:1.
 
 ## Referensi penuh
 Repo vercel-labs/agent-skills untuk checklist penuh.

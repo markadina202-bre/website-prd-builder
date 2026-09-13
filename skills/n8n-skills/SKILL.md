@@ -19,7 +19,7 @@ Merancang/membangun canvas node-editor: palet node, koneksi edge, validasi graph
   → TIDAK diimplementasi di produk ini (canvas kami untuk DESAIN PRD).
 
 ## Cara pakai di proyek ini
-Acuan UX canvas React Flow: 7 node (Persona/Feature/Page/API/DB/Decision/Ticket)
+Acuan UX canvas Svelte Flow: 7 node (Persona/Feature/Page/API/DB/Decision/Ticket)
 + 4 edge (flows-to/depends-on/implements/blocks). Validasi graph meniru n8n.
 
 ## Batasan

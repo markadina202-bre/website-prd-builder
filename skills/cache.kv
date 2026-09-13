@@ -29,7 +29,7 @@ skill.02.url = https://github.com/anthropics/skills
 skill.02.file = skills/webapp-testing/SKILL.md
 skill.02.install = npx skills add https://github.com/anthropics/skills --skill webapp-testing
 skill.02.role = Uji aplikasi web lokal dengan Playwright: verifikasi UI, debug interaktif, screenshot-driven iteration.
-skill.02.use_in_project = E2E tiap fase: grill flow, form ABCD, kanban wayfinder, canvas React Flow, export PRD.
+skill.02.use_in_project = E2E tiap fase: grill flow, form ABCD, kanban wayfinder, canvas Svelte Flow, export PRD.
 
 # --- 03. skill-creator (meta-skill) ---
 skill.03.id = skill-creator
@@ -161,15 +161,15 @@ skill.17.repo = community (registry skills.sh)
 skill.17.url = https://skills.sh
 skill.17.install = npx skills add supabase-postgres-best-practices
 skill.17.role = Praktik Postgres aman: schema, index, RLS, migrasi, query optimization.
-skill.17.use_in_project = Skema Prisma (graph/tiket/versioning), index untuk frontier query, RLS jika pakai Supabase.
+skill.17.use_in_project = Skema Drizzle (graph/tiket/versioning), index untuk frontier query, RLS jika pakai Supabase.
 
-# --- 18. vercel-react-best-practices (Next.js kencang) ---
+# --- 18. vercel-react-best-practices (perf frontend; prinsip dipetakan ke SvelteKit, ADR-006) ---
 skill.18.id = vercel-react-best-practices
 skill.18.repo = vercel-labs/agent-skills
 skill.18.url = https://github.com/vercel-labs/agent-skills
 skill.18.install = npx skills add vercel-react-best-practices
 skill.18.role = Panduan resmi-performa React/Next.js: RSC, streaming, bundling, caching, anti-waterfall.
-skill.18.use_in_project = Standar kode frontend: server components default, stream chat/canvas, bundle React Flow efisien.
+skill.18.use_in_project = Prinsip perf dipetakan ke SvelteKit: load functions + remote functions (ganti RSC), streaming SSE, dynamic import Svelte Flow. Detail: skills/vercel-react-best-practices/SKILL.md.
 
 # --- 19. get-shit-done (spec-driven dev loop) ---
 skill.19.id = get-shit-done

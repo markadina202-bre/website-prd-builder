@@ -61,7 +61,7 @@ Expire/cancel/refund → downgrade otomatis ke Gratis di periodEnd
 - **Idempotent:** dedup berdasarkan gateway ref (webhook bisa datang 2x).
 - **Single source of truth:** tabel `Subscription`, bukan session/cookie.
 - Paywall frontend (`useEntitlement`) hanya UX; enforcement tetap di backend
-  (tRPC middleware `requirePlan('pro')`).
+  (server guard `requirePlan('pro')` di hooks.server / remote function).
 
 ## Hook monetisasi (growth)
 1. **Watermark viral:** export gratis ber-watermark → tiap PRD dishare = iklan.

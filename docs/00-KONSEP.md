@@ -63,7 +63,7 @@ yang tabel di atas adalah yang aktif di alur user, sisanya dipakai saat developm
 1. **Grill engine, bukan prompt box** — 1 pertanyaan tajam per giliran, ada frontier
    & decision tree (ala `grill-me`), bukan wall-of-text.
 2. **Canvas node seperti n8n** — PRD divisualkan jadi graph modul yang bisa
-   di-drag, dipecah, dihubungkan (React Flow).
+   di-drag, dipecah, dihubungkan (Svelte Flow).
 3. **Output dioptimasi untuk AI coding** — `writing-for-agents`: predictable,
    no-op dihapus, acceptance criteria per slice (langsung tempel ke Cursor/Claude).
 4. **Indonesia-first** — Bahasa Indonesia, login Gmail, bayar QRIS/ShopeePay,

@@ -11,11 +11,12 @@
 - M-005: Bahasa produk & dokumen: Indonesia. Kode & komentar: Inggris.
 
 ## Arsitektur
-- M-010: Stack: Next.js 16 + TS + Tailwind + shadcn + tRPC + Prisma + Postgres (Neon) + Better Auth (Google) + Vercel AI SDK/OpenRouter + Inngest + React Flow.
+- M-010: Stack [CONFIRMED SvelteKit 2026-09-13]: SvelteKit (Svelte 5) + TS + Tailwind + shadcn-svelte + SvelteKit Remote Functions + Drizzle ORM + Postgres (Neon) + Better Auth (Google) + @ai-sdk/svelte/OpenRouter + Inngest + Svelte Flow (@xyflow/svelte).
 - M-011: Semua logika AI dibungkus modul `SkillRunner` (packages/skills/*). Dilarang prompt ad-hoc tersebar di UI.
 - M-012: Aturan grill keras: 1 pertanyaan/giliran, frontier-first, persist tiap turn.
 - M-013: Single source of truth langganan = tabel `Subscription` (bukan cookie/session).
 - M-014: Webhook pembayaran wajib: verifikasi signature + idempotent (dedup gateway ref) + retry via Inngest.
+- M-015: Rust = sidecar opsional (`services/rust/`): search engine index, worker PDF, auto-layout WASM, verifier. App harus jalan tanpa Rust (fallback JS). Jangan bangun sebelum ada bottleneck nyata.
 
 ## Bisnis
 - M-020: Paket: Gratis / Pro Rp49rb/bln / Team Rp199rb-bln (5 seat). [CONFIRMED user 2026-09-13]

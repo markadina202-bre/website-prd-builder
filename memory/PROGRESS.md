@@ -9,9 +9,10 @@
 - [x] User APPROVE: harga Pro Rp49rb/bln, Team Rp199rb/bln → M-020 CONFIRMED.
 - [x] User tanya: SvelteKit + lib React (AI SDK React-first, shadcn/ui)? → dijawab: BISA tapi JANGAN (dual-runtime, anti-ringan). Padanan native: @ai-sdk/svelte, shadcn-svelte, @xyflow/svelte.
 - [x] User tanya: Rust sebagai pengganti Next.js/SvelteKit? → dijawab: TIDAK (ekosistem JS tidak bisa dipindah ke Rust; Leptos 3-5x lebih lambat untuk proyek ini; Rust hanya cocok sebagai microservice/WASM sidecar pasca-launch).
-- [ ] Keputusan final stack (SvelteKit murni vs Next.js murni) → ADR-006 PROPOSED.
-**Status:** ⏳ Menunggu keputusan stack (SvelteKit vs Next.js) sebelum scaffold Fase 0.
-**Next:** Jika SvelteKit → update M-010, ADR-001, docs/02, docs/04 Fase 0, lalu scaffold.
+- [x] User tanya: React+Rust vs SvelteKit+Rust dari segala sisi? → dijawab: SvelteKit+Rust menang 57 vs 48 (teknis 9/9; React hanya menang hiring/komunitas). Varian React+backend-Rust-penuh DITOLAK.
+- [x] User CONFIRM: **lanjut SvelteKit murni + Rust sidecar** → ADR-006/ADR-007 CONFIRMED. Migrasi dokumen selesai: M-010/M-015, ADR-001, docs/00-04, cache.kv skill.02/17/18.
+**Status:** ✅ Pra-build selesai 100%. Siap scaffold Fase 0.
+**Next:** Scaffold SvelteKit (`app/`): auth Gmail + DB + layout → perlu DATABASE_URL (Neon) + Google OAuth Client ID/Secret dari user, ATAU scaffold skeleton/mock dulu.
 
 ## 2026-09-13 — Sesi 01: Riset + Rancangan + Instalasi Skill
 **Fase:** Pra-Fase 0 (konsep & fondasi pengetahuan)

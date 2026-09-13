@@ -3,10 +3,10 @@
 > Estimasi untuk 1 builder + AI coding, full-time. Skill yang dipakai tiap fase dicantumkan.
 
 ## Fase 0 — Fondasi (Minggu 1)
-- [ ] Scaffold Next.js 16 + TS + Tailwind + shadcn/ui + Biome (`vercel-react-best-practices`)
+- [ ] Scaffold SvelteKit 2 + Svelte 5 + TS + Tailwind + shadcn-svelte + Biome + svelte-check
 - [ ] Auth: Better Auth + Google OAuth (login Gmail jalan)
-- [ ] DB: Neon Postgres + Prisma schema (User, Project, ContextDoc, Abcd, Ticket, CanvasGraph, Prd, Subscription, Payment) (`supabase-postgres-best-practices`)
-- [ ] tRPC + layout dashboard + landing basic (`frontend-design`)
+- [ ] DB: Neon Postgres + Drizzle schema (User, Project, ContextDoc, Abcd, Ticket, CanvasGraph, Prd, Subscription, Payment) (`supabase-postgres-best-practices`)
+- [ ] Remote Functions + layout dashboard + landing basic (`frontend-design`)
 - [ ] Pasang `codebasememory`: MEMORY per repo + index berjalan
 - **Exit criteria:** user bisa login Gmail & buat proyek kosong.
 
@@ -33,7 +33,7 @@
 - **Exit criteria:** proyek besar terpetakan jadi tiket yang bisa dieksekusi 1-1.
 
 ## Fase 4 — Canvas ala n8n (Minggu 6–7)
-- [ ] React Flow: palet 7 node + 4 edge + minimap + auto-layout
+- [ ] Svelte Flow (@xyflow/svelte): palet 7 node + 4 edge + minimap + auto-layout
 - [ ] Modul `design` (codebase-design): generate graph dari ABCD, deletion test
 - [ ] Klik node → detail + AC + "grill node ini" (scoped grill-with-docs)
 - [ ] Validasi graph (node yatim, cycle, AC kosong) + `triage` warna prioritas
