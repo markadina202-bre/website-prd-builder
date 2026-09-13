@@ -25,9 +25,10 @@
 - [x] Strategi migrasi: `.github/workflows/migrate.yml` (dispatch manual + auto saat app/drizzle/** berubah; butuh repo secret DATABASE_URL). `gh secret set` DITOLAK 403 → user harus isi secret via GitHub UI.
 - [x] CI migrate run 34763073557: gagal di "Apply migrations" (17s). Run 34763136601 + guard: gagal di "Check DATABASE_URL secret" → TERBUKTI secret belum diisi user. `gh workflow run` tak bisa dipakai (workflow_dispatch hanya resolve dari default branch) → trigger via push app/drizzle/**.
 - [x] Pelajaran infra: JANGAN paralelkan edit file dengan git add/commit (race: 1 file ketinggalan, commit 51aa913).
-- [ ] Tunggu: (1) user isi secret DATABASE_URL → re-run/trigger → verifikasi 13 tabel, (2) GOOGLE_CLIENT_SECRET.
-**Status:** ⏳ Bola di user: isi 1 secret GitHub. Semua otomasi siap & teruji gagal-dengan-benar.
-**Next:** Secret terisi → trigger → 13 tabel → login Google end-to-end.
+- [x] User isi secret → trigger → run 34763388363: Check secret ✅ → Apply migrations ✅ → **Verify tables ✅ (13/13)**. DB Neon LIVE.
+- [ ] Terakhir: GOOGLE_CLIENT_SECRET → test login Gmail end-to-end.
+**Status:** ✅ DB selesai 100%. Login Google 90% (kode siap, Client ID terpasang, tinggal Client Secret).
+**Next:** Terima GOOGLE_CLIENT_SECRET → simpan .env + restart → user test klik login di preview.
 
 ## 2026-09-13 — Sesi 02: Validasi konsep + evaluasi stack
 **Fase:** Pra-Fase 0 (keputusan stack)
