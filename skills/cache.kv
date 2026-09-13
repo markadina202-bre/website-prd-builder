@@ -1,0 +1,373 @@
+# =====================================================================
+# CACHE.KV — Registry skill Website PRD Builder (format KV sederhana)
+# 20 skill OP + 3 bundel wajib (mattpocock, superhuman, codebasememory).
+# Nilai boleh multi-baris dengan "=". Parser: skills/index/build_index.py
+# Status cache: DISTILASI (ringkas, setia ke sumber). Isi penuh = install
+# dari repo sumber via perintah `install` masing-masing entri.
+# Diindeks: 2026-09-13 | format: kv/1 | total: 23
+# =====================================================================
+
+cache.format = kv/1
+cache.indexed_at = 2026-09-13
+cache.count = 42
+cache.index = skills/index/
+
+# --- 01. frontend-design (UI anti AI-slop) ---
+skill.01.id = frontend-design
+skill.01.repo = anthropics/skills
+skill.01.url = https://github.com/anthropics/skills
+skill.01.file = skills/frontend-design/SKILL.md
+skill.01.install = npx skills add https://github.com/anthropics/skills --skill frontend-design
+skill.01.stars = 175k+ (repo) / 862k installs
+skill.01.role = Hasilkan UI production-grade yang khas: tipografi, warna, motion, layout berani. Anti "AI slop" (ungu generik, card hambar).
+skill.01.use_in_project = Semua halaman: landing, dashboard, chat, form ABCD, kanban, canvas, PRD preview. Wajib aktif saat bikin komponen.
+
+# --- 02. webapp-testing (E2E Playwright) ---
+skill.02.id = webapp-testing
+skill.02.repo = anthropics/skills
+skill.02.url = https://github.com/anthropics/skills
+skill.02.file = skills/webapp-testing/SKILL.md
+skill.02.install = npx skills add https://github.com/anthropics/skills --skill webapp-testing
+skill.02.role = Uji aplikasi web lokal dengan Playwright: verifikasi UI, debug interaktif, screenshot-driven iteration.
+skill.02.use_in_project = E2E tiap fase: grill flow, form ABCD, kanban wayfinder, canvas Svelte Flow, export PRD.
+
+# --- 03. skill-creator (meta-skill) ---
+skill.03.id = skill-creator
+skill.03.repo = anthropics/skills
+skill.03.url = https://github.com/anthropics/skills
+skill.03.file = skills/skill-creator/SKILL.md
+skill.03.install = npx skills add https://github.com/anthropics/skills --skill skill-creator
+skill.03.role = Cara membuat/memperbaiki skill: metadata ~100 kata, badan <500 baris, progressive disclosure, resource on-demand.
+skill.03.use_in_project = Dipakai untuk menulis modul SkillRunner baru + skill kustom proyek (mis. grill-id, prd-export).
+
+# --- 04. mcp-builder (bikin MCP server) ---
+skill.04.id = mcp-builder
+skill.04.repo = anthropics/skills
+skill.04.url = https://github.com/anthropics/skills
+skill.04.file = skills/mcp-builder/SKILL.md
+skill.04.install = npx skills add https://github.com/anthropics/skills --skill mcp-builder
+skill.04.role = Panduan bikin MCP server berkualitas untuk integrasi API/service eksternal ke agen AI.
+skill.04.use_in_project = Opsi fase lanjut: expose PRD Builder sebagai MCP (mis. "ambil PRD proyek X") untuk Claude/Cursor user.
+
+# --- 05. pdf (manajemen PDF) ---
+skill.05.id = pdf
+skill.05.repo = anthropics/skills
+skill.05.url = https://github.com/anthropics/skills
+skill.05.file = skills/pdf/SKILL.md
+skill.05.install = npx skills add https://github.com/anthropics/skills --skill pdf
+skill.05.role = Baca, buat, merge, split, isi form, ekstrak teks/tabel/gambar, OCR pada PDF.
+skill.05.use_in_project = Export PRD → PDF cantik (Pro) via Inngest job. Backend: locked template + header/footer brand.
+
+# --- 06. docx (Word) ---
+skill.06.id = docx
+skill.06.repo = anthropics/skills
+skill.06.url = https://github.com/anthropics/skills
+skill.06.file = skills/docx/SKILL.md
+skill.06.install = npx skills add https://github.com/anthropics/skills --skill docx
+skill.06.role = Buat/edit/analisis .docx dengan tracked changes, style, tabel.
+skill.06.use_in_project = Export PRD → Word (Pro) agar bisa diedit klien/konsultan.
+
+# --- 07. pptx (slide deck) ---
+skill.07.id = pptx
+skill.07.repo = anthropics/skills
+skill.07.url = https://github.com/anthropics/skills
+skill.07.file = skills/pptx/SKILL.md
+skill.07.install = npx skills add https://github.com/anthropics/skills --skill pptx
+skill.07.role = Buat/edit .pptx: outline→deck, template/brand, chart, speaker notes.
+skill.07.use_in_project = "Pitch PRD": 1-klik ubah PRD jadi slide presentasi ke stakeholder/investor (Pro).
+
+# --- 08. brainstorming (Socratic discovery) ---
+skill.08.id = brainstorming
+skill.08.repo = obra/superpowers
+skill.08.url = https://github.com/obra/superpowers
+skill.08.file = skills/brainstorming/SKILL.md
+skill.08.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.08.stars = 40K+ (koleksi)
+skill.08.role = Klarifikasi kebutuhan via tanya-jawab Socratic + spec self-review inline (placeholder scan, konsistensi, scope, ambiguitas).
+skill.08.use_in_project = Dipakai INTERNAL saat build tiap fase roadmap + inspirasi grill engine (beda: grill produk = 1Q/turn untuk end-user).
+
+# --- 09. systematic-debugging (debug 4 fase) ---
+skill.09.id = systematic-debugging
+skill.09.repo = obra/superpowers
+skill.09.url = https://github.com/obra/superpowers
+skill.09.file = skills/systematic-debugging/SKILL.md
+skill.09.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.09.role = Root-cause 4 fase: reproduce → isolate (binary search) → hypothesize+experiment → fix+verify. Bundel: root-cause-tracing, defense-in-depth, condition-based-waiting.
+skill.09.use_in_project = Debug SkillRunner, canvas graph, webhook. Juga pola untuk "diagnosing-bugs PRD" (bug = cacat dokumen).
+
+# --- 10. test-driven-development (TDD enforcement) ---
+skill.10.id = test-driven-development
+skill.10.repo = obra/superpowers
+skill.10.url = https://github.com/obra/superpowers
+skill.10.file = skills/test-driven-development/SKILL.md
+skill.10.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.10.role = RED-GREEN-REFACTOR ditegakkan: tulis implementasi tanpa test = hapus & ulangi. Anti-pattern testing dibundel.
+skill.10.use_in_project = Wajib untuk packages/skills/* (grill, wayfinder, spec). AC di PRD ditulis agar siap-TDD (vertical slice).
+
+# --- 11. writing-plans (rencana eksekusi) ---
+skill.11.id = writing-plans
+skill.11.repo = obra/superpowers
+skill.11.url = https://github.com/obra/superpowers
+skill.11.file = skills/writing-plans/SKILL.md
+skill.11.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.11.role = Pecah kerja jadi task 2-5 menit, tanpa placeholder (no TBD), self-review: spec coverage, konsistensi tipe. Pasangan: executing-plans.
+skill.11.use_in_project = Perencanaan tiap fase roadmap + generator "rencana eksekusi" di paket AI-Coding.
+
+# --- 12. subagent-driven-development (orkestrasi paralel) ---
+skill.12.id = subagent-driven-development
+skill.12.repo = obra/superpowers
+skill.12.url = https://github.com/obra/superpowers
+skill.12.file = skills/subagent-driven-development/SKILL.md
+skill.12.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.12.role = Tech-lead pattern: delegasikan task ke subagen terisolasi + 2-stage review (spec conformance, code quality) + merge.
+skill.12.use_in_project = Build paralel modul SkillRunner; pola tiket Research AFK (subagent riset → hasil → review).
+
+# --- 13. verification-before-completion (gerbang bukti) ---
+skill.13.id = verification-before-completion
+skill.13.repo = obra/superpowers
+skill.13.url = https://github.com/obra/superpowers
+skill.13.file = skills/verification-before-completion/SKILL.md
+skill.13.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.13.role = Evidence over claims: tidak boleh klaim "selesai" tanpa bukti (test hijau, demo, log). Checklist pre-completion.
+skill.13.use_in_project = Exit criteria tiap fase roadmap; quality gate skor PRD; checklist sebelum export.
+
+# --- 14. excalidraw-diagram (diagram arsitektur) ---
+skill.14.id = excalidraw-diagram
+skill.14.repo = coleam00/excalidraw-diagram-skill
+skill.14.url = https://github.com/coleam00/excalidraw-diagram-skill
+skill.14.install = npx skills add https://github.com/coleam00/excalidraw-diagram-skill --skill excalidraw-diagram
+skill.14.role = Hasilkan diagram arsitektur/alur visual (Excalidraw) dari deskripsi sistem.
+skill.14.use_in_project = Diagram otomatis di PRD final (arsitektur modul + user flow) + thumbnail canvas.
+
+# --- 15. n8n-skills (pengetahuan workflow automation) ---
+skill.15.id = n8n-skills
+skill.15.repo = community (registry skills.sh)
+skill.15.url = https://skills.sh
+skill.15.install = npx skills add n8n-skills
+skill.15.role = Pola workflow automation ala n8n: trigger→node→edge, serialisasi graph→JSON, eksekusi per-node, retry/history.
+skill.15.use_in_project = Referensi UX canvas (palet node, edge, minimap, run mental-model). Catatan: canvas kita untuk DESAIN, bukan eksekusi.
+
+# --- 16. webhook-skills (webhook pembayaran) ---
+skill.16.id = webhook-skills
+skill.16.repo = Hookdeck
+skill.16.url = https://hookdeck.com
+skill.16.install = npx skills add hookdeck/webhook-skills
+skill.16.role = Koleksi skill webhook per-provider: terima event, verifikasi signature, idempotency, retry, log audit.
+skill.16.use_in_project = KRITIS Fase 6: webhook Midtrans + Polar (signature verify, dedup ref, Inngest retry, audit log).
+
+# --- 17. supabase-postgres-best-practices (DB aman) ---
+skill.17.id = supabase-postgres-best-practices
+skill.17.repo = community (registry skills.sh)
+skill.17.url = https://skills.sh
+skill.17.install = npx skills add supabase-postgres-best-practices
+skill.17.role = Praktik Postgres aman: schema, index, RLS, migrasi, query optimization.
+skill.17.use_in_project = Skema Drizzle (graph/tiket/versioning), index untuk frontier query, RLS jika pakai Supabase.
+
+# --- 18. vercel-react-best-practices (perf frontend; prinsip dipetakan ke SvelteKit, ADR-006) ---
+skill.18.id = vercel-react-best-practices
+skill.18.repo = vercel-labs/agent-skills
+skill.18.url = https://github.com/vercel-labs/agent-skills
+skill.18.install = npx skills add vercel-react-best-practices
+skill.18.role = Panduan resmi-performa React/Next.js: RSC, streaming, bundling, caching, anti-waterfall.
+skill.18.use_in_project = Prinsip perf dipetakan ke SvelteKit: load functions + remote functions (ganti RSC), streaming SSE, dynamic import Svelte Flow. Detail: skills/vercel-react-best-practices/SKILL.md.
+
+# --- 19. get-shit-done (spec-driven dev loop) ---
+skill.19.id = get-shit-done
+skill.19.repo = community (TÂCHES)
+skill.19.install = npx skills add get-shit-done
+skill.19.role = Meta-prompting + context engineering + spec-driven development ringan untuk Claude Code: spec → task → eksekusi → review.
+skill.19.use_in_project = Loop harian build: tiap PRD paket AI-Coding kompatibel dengan pola ini (paste & jalan).
+
+# --- 20. agent-browser (otomasi browser) ---
+skill.20.id = agent-browser
+skill.20.repo = community (14K stars)
+skill.20.install = npm install -g agent-browser
+skill.20.role = Web automation production-grade berbasis referensi: klik, isi form, screenshot, scraping untuk agen.
+skill.20.use_in_project = Testing UI otomatis + tiket Research AFK yang butuh baca web (bersama skill research).
+
+# --- 21. BUNDEL mattpocock (35 skills, otak produk) ---
+skill.21.id = mattpocock
+skill.21.kind = bundle
+skill.21.repo = mattpocock/skills
+skill.21.url = https://github.com/mattpocock/skills
+skill.21.install = npx skills@latest add mattpocock/skills
+skill.21.stars = 48K+
+skill.21.role = Koleksi skill real-engineer: grill-me, grill-with-docs, grilling, wayfinder, to-spec, to-tickets, to-questionnaire, domain-modeling, codebase-design, tdd, implement, prototype, research, diagnosing-bugs, code-review, triage, handoff, teach, wait-what, wizard, ask-matt, dll (35 total).
+skill.21.use_in_project = JANTUNG PRODUK. Tiap skill = modul SkillRunner. Detail lengkap: skills/mattpocock/SKILL.md.
+
+# --- 22. BUNDEL superhuman (= obra/superpowers full framework) ---
+skill.22.id = superhuman
+skill.22.kind = bundle
+skill.22.repo = obra/superpowers
+skill.22.url = https://github.com/obra/superpowers
+skill.22.install = git clone https://github.com/obra/superpowers ~/.claude/skills/superpowers
+skill.22.stars = 40K+
+skill.22.role = Framework metodologi dev: brainstorming, writing-plans, executing-plans, test-driven-development, systematic-debugging, subagent-driven-development, verification-before-completion, requesting/receiving-code-review, using-git-worktrees, dispatching-parallel-agents, writing-skills. Prinsip: TDD, sistematis, simplicity, evidence.
+skill.22.use_in_project = CARA KERJA BUILD. Semua fase roadmap dieksekusi dengan framework ini. Catatan: skill.08-13 adalah pin individual dari bundel ini.
+
+# --- 23. BUNDEL codebasememory (memori codebase) ---
+skill.23.id = codebasememory
+skill.23.kind = bundle(custom)
+skill.23.repo = local + pola supermemory/superlocalmemory
+skill.23.file = skills/codebasememory/SKILL.md
+skill.23.install = built-in (repo ini)
+skill.23.role = Memori persistent codebase: MEMORY.md file-based + SQLite/Chroma opsional + semantic recall + auto-inject konteks. Pola: supermemory (Memory API, knowledge graph), superlocalmemory (local-first, temporal), agent-memory (TerminalSkills).
+skill.23.use_in_project = TULANG PUNGGUNG PEWARISAN: memory/ + CONTEXT.md per proyek + index skills. Agen wajib baca sebelum kerja, tulis sesudah kerja.
+
+# --- 24. avoid-ai-design (audit & rewrite anti AI-slop) ---
+skill.24.id = avoid-ai-design
+skill.24.repo = funboy322/avoid-ai-design
+skill.24.url = https://github.com/funboy322/avoid-ai-design
+skill.24.install = npx skills add https://github.com/funboy322/avoid-ai-design
+skill.24.role = Audit frontend AI lalu rewrite agar tidak terlihat AI: katalog tells (tipografi, warna, layout, komponen, spacing, motion, ikon, copy, imagery) + severity P0/P1/P2 + mode detect-only atau rewrite.
+skill.24.use_in_project = Gate WAJIB tiap halaman: audit detect-only → perbaiki P0/P1 → rewrite searah. Dipakai bersama frontend-design (kreasi) + antislop (filter).
+
+# --- 25. antislop-suite (filter 38 aturan + Delivery Gate) ---
+skill.25.id = antislop-suite
+skill.25.repo = miqdadbadjuber/Anti-Slop
+skill.25.url = https://github.com/miqdadbadjuber/Anti-Slop
+skill.25.install = npx skills add https://github.com/miqdadbadjuber/Anti-Slop
+skill.25.role = Filter 6 skill (antislop core, ui, copywriting, human, layoutmobile, code): 38 aturan 3 tier (Hard/Purpose/Quality), Liveliness Toolkit (ENERGY/RHYTHM/MOTION), Delivery Gate PASS/FAIL. BUKAN style guide — arah desain dari DESIGN.md.
+skill.25.use_in_project = Mode During saat bangun UI + mode After untuk audit halaman lama. Copy Indonesia (headline, CTA, empty/error states) wajib lewat antislop-copywriting.
+
+# --- 26. web-design-guidelines (cek implementasi praktis) ---
+skill.26.id = web-design-guidelines
+skill.26.repo = vercel-labs/agent-skills
+skill.26.url = https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+skill.26.install = npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
+skill.26.role = Checklist implementasi: semantic HTML, focus states, dimensi gambar, kesalahan frontend yang wajib dihindari.
+skill.26.use_in_project = Standar markup semua halaman + canvas (aksesibilitas keyboard, focus ring, alt/size gambar). Pasangan: web-quality-skills.
+
+# --- 27. ux-ui-agent-skills (senior design architect + Svelte) ---
+skill.27.id = ux-ui-agent-skills
+skill.27.repo = plugin87/ux-ui-agent-skills
+skill.27.url = https://github.com/plugin87/ux-ui-agent-skills
+skill.27.stars = 1.2k+
+skill.27.role = 17 skill runnable: token DTCG 3-tier, komponen atomic + 8 states, adapter multi-framework (TERMASUK Svelte), audit WCAG 2.2, review 6 dimensi + Nielsen, motion tokenized, UX writing, 138 design systems, anti-slop doctrine.
+skill.27.use_in_project = Standar desain produk: token → komponen shadcn-svelte → halaman. Lihat juga: userinterface-wiki (raphaelsalaja), DESIGN.md standar Google (google-labs-code/design.md).
+
+# --- 28. tailwind-4-docs (Tailwind v4 — versi kita) ---
+skill.28.id = tailwind-4-docs
+skill.28.repo = Lombiq/Tailwind-Agent-Skills
+skill.28.url = https://github.com/Lombiq/Tailwind-Agent-Skills
+skill.28.install = npx skills add Lombiq/Tailwind-Agent-Skills
+skill.28.role = Dokumentasi Tailwind v4 yang dioptimasi agen: gotchas, playbook implementasi/refactor/review, snapshot docs lokal + index (cara mirip index skills repo ini).
+skill.28.use_in_project = Rujukan WAJIB styling (app memakai Tailwind v4 + @theme). Cek gotchas dulu sebelumutility eksotis.
+
+# --- 29. make-interfaces-feel-better (craft & feel) ---
+skill.29.id = make-interfaces-feel-better
+skill.29.repo = jakubkrehel/make-interfaces-feel-better
+skill.29.url = https://github.com/jakubkrehel/make-interfaces-feel-better
+skill.29.install = npx skills add https://github.com/jakubkrehel/make-interfaces-feel-better
+skill.29.role = Detail craft: optical alignment, word wrapping, button tactility, motion feel — yang membedakan "rapi" vs "premium".
+skill.29.use_in_project = Polish pass terakhir tiap halaman + micro-interaction canvas/kanban (drag feel, hover states, transisi).
+
+# --- 30. impeccable (taste + DESIGN.md + commands) ---
+skill.30.id = impeccable
+skill.30.repo = pbakaus/impeccable
+skill.30.url = https://github.com/pbakaus/impeccable
+skill.30.install = npx skills add https://github.com/pbakaus/impeccable
+skill.30.role = Selera + konteks produk + 12 command eksplisit (teach, document, shape, craft, critique, audit, polish, adapt, optimize, typeset, layout...). craft mewajibkan brief bentuk + arah visual + inspeksi browser + loop kritik-perbaiki.
+skill.30.use_in_project = Alur desain resmi: shape (brief) → craft (bangun) → critique (nilai) → polish (rapikan) untuk tiap halaman besar.
+
+# --- 31. web-quality-skills (a11y + perf + SEO) ---
+skill.31.id = web-quality-skills
+skill.31.repo = addyosmani/web-quality-skills
+skill.31.url = https://github.com/addyosmani/web-quality-skills/tree/main/skills
+skill.31.install = npx skills add https://github.com/addyosmani/web-quality-skills
+skill.31.role = Koleksi: accessibility (WCAG), best-practices, core-web-vitals (LCP/INP/CLS), performance, seo.
+skill.31.use_in_project = Quality gate pra-rilis tiap halaman: skor a11y + vitals + SEO dasar (meta, semantic, sitemap saat landing publik).
+
+# --- 32. to-spec (percakapan → spec, FASE 5) ---
+skill.32.id = to-spec
+skill.32.repo = mattpocock/skills
+skill.32.url = https://github.com/mattpocock/skills
+skill.32.file = skills/to-spec/SKILL.md
+skill.32.install = npx skills@latest add mattpocock/skills
+skill.32.role = Sintesis spec dari konteks yang sudah ada TANPA wawancara: seams testing dulu, template Problem/Solution/User Stories/Implementation/Testing/Out-of-scope, tanpa path file.
+skill.32.use_in_project = Mesin FASE 5 (PRD Final): grill+form+wayfinder+canvas → spec Indonesia.
+
+# --- 33. to-tickets (spec → tiket tracer-bullet, FASE 3) ---
+skill.33.id = to-tickets
+skill.33.repo = mattpocock/skills
+skill.33.url = https://github.com/mattpocock/skills
+skill.33.file = skills/to-tickets/SKILL.md
+skill.33.install = npx skills@latest add mattpocock/skills
+skill.33.role = Pecah spec jadi tiket vertical slice demoable + blocking edges; wide refactor via expand–contract; quiz granularity; kerjakan frontier.
+skill.33.use_in_project = Mesin FASE 3 (Wayfinder): fog→frontier→doing→done + destination.
+
+# --- 34. to-questionnaire (keputusan → kuesioner, FASE 2) ---
+skill.34.id = to-questionnaire
+skill.34.repo = mattpocock/skills
+skill.34.url = https://github.com/mattpocock/skills
+skill.34.file = skills/to-questionnaire/SKILL.md
+skill.34.install = npx skills@latest add mattpocock/skills
+skill.34.role = Grill the send (bukan subject): kuesioner most-important-first, 1 ide/soal, stub jawaban, why-this-matters, catch-all.
+skill.34.use_in_project = Mesin FASE 2 (Form) — SUDAH DITERAPKAN: soal + "Kenapa ditanya" + a/b/c/d.
+
+# --- 35. domain-modeling (glossary + ADR) ---
+skill.35.id = domain-modeling
+skill.35.repo = mattpocock/skills
+skill.35.url = https://github.com/mattpocock/skills
+skill.35.file = skills/domain-modeling/SKILL.md
+skill.35.install = npx skills@latest add mattpocock/skills
+skill.35.role = Disiplin aktif: tantang istilah vs glossary, skenario tepi konkret, CONTEXT.md inline (glossary saja), ADR hanya jika 3-gate lolos.
+skill.35.use_in_project = Grill (tajamkan istilah) + Canvas (node = entitas) + CONTEXT.md per proyek.
+
+# --- 36. prototype (throwaway penjawab pertanyaan) ---
+skill.36.id = prototype
+skill.36.repo = mattpocock/skills
+skill.36.url = https://github.com/mattpocock/skills
+skill.36.file = skills/prototype/SKILL.md
+skill.36.install = npx skills@latest add mattpocock/skills
+skill.36.role = 1 pertanyaan = 1 prototipe throwaway: logika→HTML mandiri, UI→variasi radikal 1 route; tanpa persistensi/polish; state terlihat; keputusan dilipat, kode dibuang ke branch.
+skill.36.use_in_project = Internal builder + calon kapabilitas produk Fase 6 (Prototoipe).
+
+# --- 37. research (riset sumber primer) ---
+skill.37.id = research
+skill.37.repo = mattpocock/skills
+skill.37.url = https://github.com/mattpocock/skills
+skill.37.file = skills/research/SKILL.md
+skill.37.install = npx skills@latest add mattpocock/skills
+skill.37.role = Agen latar riset sumber PRIMER saja (docs/kode/spec/API), tiap klaim dikutip, output 1 file MD per konvensi repo.
+skill.37.use_in_project = Pengayaan grill + tiket Research Wayfinder.
+
+# --- 38. writing-shape (tumpukan → artikel) ---
+skill.38.id = writing-shape
+skill.38.repo = mattpocock/skills
+skill.38.url = https://github.com/mattpocock/skills
+skill.38.file = skills/writing-shape/SKILL.md
+skill.38.install = npx skills@latest add mattpocock/skills
+skill.38.role = Exploit: grounding konsep, 2–3 opening (user pilih), tumbuh paragraf-per-paragraf, tumpukan = tambang, gap diberi nama, format disengaja.
+skill.38.use_in_project = Kualitas prosa FASE 5: artefak → PRD satu suara.
+
+# --- 39. wizard (pemandu prosedur manual) ---
+skill.39.id = wizard
+skill.39.repo = mattpocock/skills
+skill.39.url = https://github.com/mattpocock/skills
+skill.39.file = skills/wizard/SKILL.md
+skill.39.install = npx skills@latest add mattpocock/skills
+skill.39.role = Hasilkan wizard bash untuk langkah human-only: scope→journey→author→verify; template stages+confirm+secret-entry; ephemeral default.
+skill.39.use_in_project = INTERNAL repo: onboarding env/secret, migrasi satu-kali. Bukan fitur produk.
+
+# --- 40. prd-schema (template inti PRD) ---
+skill.40.id = prd-schema
+skill.40.repo = github/awesome-copilot
+skill.40.url = https://github.com/github/awesome-copilot
+skill.40.install = npx skills add https://github.com/github/awesome-copilot --skill prd
+skill.40.role = PRD production-grade: discovery interview dulu, skema 5 seksi (summary/UX+stories+non-goals/AI/tech/risks-roadmap), konkret terukur, larang kata kabur.
+skill.40.use_in_project = Template inti FASE 5 + rubric skor ketajaman.
+
+# --- 41. pm-copilot (pilih template PRD) ---
+skill.41.id = pm-copilot
+skill.41.repo = slgoodrich/agents
+skill.41.url = https://github.com/slgoodrich/agents
+skill.41.role = Skor kompleksitas 3 dimensi → Lean/Comprehensive/Amazon PR-FAQ/Google PRD; requirements-engineer; stress-test; fokus solo-dev.
+skill.41.use_in_project = FASE 5: penentu template per proyek + stress-test draf.
+
+# --- 42. prd-quality-gate (exit gate PRD) ---
+skill.42.id = prd-quality-gate
+skill.42.repo = jnPiyush/AgentX
+skill.42.url = https://github.com/jnPiyush/AgentX
+skill.42.role = 5 non-negotiables (bukti, terukur, intent, konsisten, handoff-ready) + discovery gate + kontrak AI 7 kolom; PASS/FAIL sebelum export.
+skill.42.use_in_project = Exit gate FASE 5 sebelum export MD/PDF/DOCX.

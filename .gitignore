@@ -1,0 +1,12 @@
+node_modules/
+.svelte-kit/
+build/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+# Sandbox dev-only (tak pernah di-commit)
+.venv-pg/
+.pgdata/
+.pguri

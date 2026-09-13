@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	--color-paper: #faf7f1;
+
+	--color-ink-950: #141817;
+	--color-ink-900: #1e2422;
+	--color-ink-700: #39423f;
+	--color-ink-500: #67726e;
+	--color-ink-300: #b9c2be;
+
+	--color-brand-700: #09573f;
+	--color-brand-600: #0b6b4f;
+	--color-brand-100: #d3e9dd;
+	--color-brand-50: #eaf5ef;
+
+	--color-signal-600: #c74e22;
+	--color-signal-500: #e15a2b;
+	--color-signal-50: #fdeee6;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--color-paper);
+	color: var(--color-ink-900);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Architect's graph paper — brand texture, not a generic gradient. */
+.bg-blueprint {
+	background-image:
+		linear-gradient(to right, rgb(20 24 23 / 0.06) 1px, transparent 1px),
+		linear-gradient(to bottom, rgb(20 24 23 / 0.06) 1px, transparent 1px);
+	background-size: 28px 28px;
+}
+
+::selection {
+	background: var(--color-brand-600);
+	color: #fff;
+}
