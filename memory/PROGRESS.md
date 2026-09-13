@@ -11,6 +11,7 @@
 - [x] Verifikasi: index rebuild 0-change + search OK; push terverifikasi.
 - [x] Lanjutan (atas pertanyaan user): PANDUAN-SESI dilengkapi — status terkini, diagnosis cepat, peta secret, nama branch asli.
 - [x] Lanjutan 2 (atas perintah user): aturan simpan-OTOMATIS tiap progres kecil + `scripts/simpan.sh` (add+commit+push+verifikasi).
+- [x] Lanjutan 3 (atas perintah user "simpan di main"): PR #1 arena→main DIBUAT + MERGED (merge `ac593cb`, 29 commit Sesi 10–16). Aturan "jangan merge" dicabut user utk merge ini.
 **Status:** ✅ Pewarisan lengkap. Tunggu Google client_secret + review + instruksi.
 **Next:** Secret masuk → login hijau → Fase 1 (OpenRouter key).
 

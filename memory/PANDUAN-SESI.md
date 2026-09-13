@@ -6,7 +6,8 @@
 ## Status terkini (update tiap sesi — patokan: Sesi 16, 2026-09-13)
 | Aspek | Keadaan |
 |---|---|
-| HEAD | `531a10a` Sesi 16, remote == lokal, tree bersih |
+| HEAD arena | `7384394` Sesi 16, remote == lokal, tree bersih |
+| Main | ✅ `ac593cb` (PR #1 merged 2026-09-14: 29 commit Sesi 10–16) |
 | Preview prod :5173 | HIDUP (build Sesi 15: admin + harga dinamis) |
 | Postgres lokal :5433 | HIDUP (14 tabel + site_settings: pro=49000, team=199000) |
 | Login Google | 🔴 MATI — `client_secret` kosong di `.env`, nunggu user tempel di chat |

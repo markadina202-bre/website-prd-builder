@@ -35,6 +35,7 @@
 - M-043: Admin skeleton: tabel site_settings (key/value) + API + gate ADMIN_EMAILS (kosong = terbuka sementara + banner). Harga landing SSR dari DB + fallback. Migrasi tulis tangan: file SQL + entri _journal.json (migrate OK tanpa snapshot baru). Produksi: role admin di DB + kunci env.
 - M-044: Paket pewarisan sesi baru = memory/PANDUAN-SESI.md (dibaca pertama) + AGENTS.md v2 (7 pasal) + ADR-008..011. Index skill: 42 skill / 254 chunk, rebuild 0-change = fresh.
 - M-045: Aturan simpan-otomatis (perintah user): tiap progres sekecil apa pun → catat PROGRESS → ./scripts/simpan.sh (add+commit+push+verifikasi remote==lokal). Akhiri tiap giliran tree bersih; maks 3 perubahan tak-berhubungan per commit.
+- M-046: MAIN = ac593cb (2026-09-14): PR #1 arena→main merged, 29 commit Sesi 10–16. Merge via gh (server-side) agar sesi tetap di branch arena. Aturan merge-hanya-atas-perintah tetap berlaku utk berikutnya.
 - M-030: Nama produk "Form ABCD" → "Form" (struktur ABCD tetap internal). Route `/abcd` → `/form` (bookmark lama 404, beta = OK). Tabel DB `abcd` TIDAK diganti (hindari migrasi sia-sia).
 - M-031: n8n canvas = Vue Flow (xyflow). SvelteKit = @xyflow/svelte: `bind:nodes/bind:edges`, node custom via `nodeTypes`, WAJIB browser-guard (SSR crash), simpan state manual.
 - M-032: `as` cast TIDAK boleh di `{#each}` Svelte (parse error) → data bertipe di `<script>`. `{@const}` hanya anak langsung block — di dalam div biasa = error.
